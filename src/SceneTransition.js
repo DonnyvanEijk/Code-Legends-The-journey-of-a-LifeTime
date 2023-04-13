@@ -1,6 +1,7 @@
 class SceneTransition {
     constructor() {
       this.element = null;
+     
     }
     createElement() {
       this.element = document.createElement("div");
@@ -17,6 +18,7 @@ class SceneTransition {
     init(container, callback) {
       this.createElement();
       container.appendChild(this.element);
+    
   
       this.element.addEventListener("animationend", () => {
         callback();

@@ -79,8 +79,8 @@ class Overworld {
  
    this.map.startCutscene([
     
-     { type: "changeMap", map: "DemoRoom"},
-     { type: "textMessage", text: "Welcome to the tutorial!"},
+     { type: "changeMap", map: "Plain"},
+    
      { type: "textMessage", text: "Press w a s d to walk!"},
      { type: "textMessage", text: "Press Enter to interact!"},
    ])

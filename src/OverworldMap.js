@@ -12,6 +12,13 @@ class OverworldMap {
     this.upperImage.src = config.upperSrc;
 
     this.isCutscenePlaying = false;
+
+    this.audio = new Audio();
+    this.audio.src = config.audioSrc;
+    this.audio.loop = true;
+    
+    this.audio.volume = 0.5;
+    this.audio.play();
   }
 
   drawLowerImage(ctx, cameraPerson) {
@@ -94,7 +101,21 @@ class OverworldMap {
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x, y);
   }
+  changeMap(newMapConfig) {
+    // Stop current audio
+    this.audio.pause();
 
+    // Change map
+    // ...
+
+    // Load new audio
+    this.audio.src = newMapConfig.audioSrc;
+    this.audio.play();
+  }
+  
+  pauseAudio() {
+    this.audio.pause();
+  }
 }
 
 window.OverworldMaps = {
@@ -231,6 +252,7 @@ window.OverworldMaps = {
 
   },
   CodeRoom: {
+    
     lowerSrc: "./images/maps/CoderoomLower.png",
     upperSrc: "./images/maps/CoderoomUpper.png",
     gameObjects: {
@@ -358,6 +380,7 @@ window.OverworldMaps = {
     }
   },
   Plain: {
+    audioSrc: "",
     lowerSrc: "./images/maps/StreetLower.png",
     upperSrc: "./images/maps/StreetUpper.png",
     gameObjects: {
@@ -491,5 +514,3 @@ window.OverworldMaps = {
 
   },
 }
-
-
