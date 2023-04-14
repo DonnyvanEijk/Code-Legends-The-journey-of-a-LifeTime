@@ -1397,17 +1397,17 @@ body {
 }
 
 .game-container {
-  position: absolute;
+  position: relative;
   width: 352px;
   height: 198px;
   margin: 0 auto;
   outline: 1px solid rgb(0, 0, 0);
   bottom: 17rem;
-  left:36.5rem;
-  top:-14rem;
+  left:-0rem;
+  top:-24rem;
 
 
-  transform: scale(4.4) translateY(50%);
+  transform: scale(3.8) translateY(50%);
 }
 
 .game-container canvas {
