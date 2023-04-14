@@ -1414,7 +1414,23 @@ body {
   image-rendering: pixelated;
 }
 
+.startingmenu {
+  z-index: 100;
+  background-color: black;
+  width:100vw;
+  height:100vh;
+  position: absolute
 
+}
+
+.startingmenu button {
+  position: absolute;
+  top:20rem;
+  left:47rem;
+  font-size: 2em;
+  padding:10px;
+  border-radius: 5px;
+}
 
 
 .carc {
@@ -1431,6 +1447,14 @@ body {
   position: absolute;
   top: 40rem;
   left: 39rem
+}
+
+.startingmenu img {
+  width:250px;
+  position: absolute;
+  left:42rem;
+  top:3rem;
+  image-rendering: pixelated;
 }
 
 /* MAin-text */
@@ -2256,7 +2280,7 @@ transition: 500ms ease;
     border-radius: 30px;
     cursor: pointer;
     left:73rem;
-    z-index: 5;
+    z-index: 1001;
     top:10rem;
   }
 
@@ -2293,7 +2317,7 @@ transition: 500ms ease;
   .questitems {
     background-color:gold ;
     position: absolute;
-    z-index: 5;
+    z-index: 1001;
     left:20rem;
     color:black;
     padding:10px;
@@ -2343,7 +2367,7 @@ transition: 500ms ease;
     align-items: center;
     border-radius: 10px;
     transition: 500ms ease;
-  z-index: 5;
+  z-index: 101;
   cursor:pointer
 
   }
@@ -2381,7 +2405,7 @@ transition: 500ms ease;
    
     position: absolute;
    
-    z-index: 6;
+    z-index: 1001;
     
     transition: 2000ms ease;
     top:1rem;
@@ -2404,7 +2428,7 @@ transition: 500ms ease;
 
   .settingsmenu {
     position: absolute;
-    z-index:10;
+    z-index:1002;
     background-color: #8000FF;
     width:30rem;
     height:20rem;
@@ -2507,7 +2531,7 @@ transition: 500ms ease;
     position: absolute;
     border-radius: 10px;
     top:4rem;
-    z-index: 4;
+    z-index: 10;
     transition: 1s ease;
     display: none;
 
@@ -2523,6 +2547,7 @@ transition: 500ms ease;
     left:4rem;
     top:-2rem;
     cursor: pointer;
+    z-index: 1001;
   }
 
   .music p{
@@ -2563,7 +2588,7 @@ transition: 500ms ease;
   height:20rem;
   position: absolute;
   background-color: brown;
-  z-index: 12;
+  z-index: 1001;
   border: red 5px solid;
   left:20rem;
   bottom:17rem;
@@ -2594,6 +2619,7 @@ position: absolute;
 left:46rem;
 bottom:16rem;
 cursor: pointer;
+z-index: 1001;
 }
 
 

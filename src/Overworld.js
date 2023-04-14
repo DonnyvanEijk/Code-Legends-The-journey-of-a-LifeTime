@@ -83,6 +83,9 @@ class Overworld {
     
      { type: "textMessage", text: "Press w a s d to walk!"},
      { type: "textMessage", text: "Press Enter to interact!"},
+
+
+     { type: "textMessage", text: "Beware because the professor needs you.."},
    ])
  
   }

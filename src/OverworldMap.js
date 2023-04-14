@@ -16,20 +16,23 @@ class OverworldMap {
 
     this.isCutscenePlaying = false;
 
-    this.audio = new Audio();
-    this.audioSrc = config.audioSrc;
-    this.audio.src = this.audioSrc;
-    this.audio.loop = true;
-    this.audio.volume = 0.5;
   
+   
+    
+
+
+  }
+
+  stopAudio() {
+    this.currentAudio.pause();
+  }
+
     
   
 
     // Add event listener to pause audio when another song starts playing
 
-   
-  }
-
+  
   drawLowerImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.lowerImage,
@@ -247,7 +250,7 @@ window.OverworldMaps = {
 
   },
   CodeRoom: {
-    audioSrc: "../music/silly_tutorial_music.mp3",
+   
     lowerSrc: "./images/maps/CoderoomLower.png",
     upperSrc: "./images/maps/CoderoomUpper.png",
     gameObjects: {
@@ -271,30 +274,14 @@ window.OverworldMaps = {
           }
         ]
       }),
-      NPCC: new Person({
-        x: utils.withGrid(10),
-        y: utils.withGrid(5),
-        src: "./images/characters/people/npc3.png",
-        behaviorLoop: [
-          { type: "stand", direction: "left", time: 800 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Goeiemorgen!", faceHero: "NPCC" },
-              { type: "textMessage", text: "Heb je het nieuws al gehoord over de mijnen?" },
-              { type: "textMessage", text: "Er blijkt daar een schat te zitten!" }
-            ]
-          }
-        ]
-      }),
-      baron: new Person({
+     
+      ProfesorC: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(8),
-        src: "./images/characters/people/npc2.png",
+        src: "../images/characters/professor_Taurus.png",
 
         behaviorLoop: [
-          { type: "stand", direction: "left", time: 800 },
+          { type: "stand", direction: "down", time: 800 },
           { type: "stand", direction: "up", time: 800 },
           { type: "stand", direction: "right", time: 1200 },
           { type: "stand", direction: "up", time: 300 },
@@ -302,7 +289,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Wat een dag om kaal te zijn", faceHero: "baron" },
+              { type: "textMessage", text: "Player i need you?!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "Please fill in the code C.L.O.C.K on your keyboard", faceHero: "ProfesorC" },
             ]
           }
         ]
@@ -330,8 +318,8 @@ window.OverworldMaps = {
       [utils.asGridCoord(2, 3)]: true,
       [utils.asGridCoord(13, 5)]: true,
       [utils.asGridCoord(13, 6)]: true,
-      [utils.asGridCoord(13, 7)]: true,
-      [utils.asGridCoord(13, 8)]: true,
+      // [utils.asGridCoord(13, 7)]: true,
+      // [utils.asGridCoord(13, 8)]: true,
       [utils.asGridCoord(13, 9)]: true,
       [utils.asGridCoord(7, 3)]: true,
       [utils.asGridCoord(13, 9)]: true,
@@ -363,6 +351,8 @@ window.OverworldMaps = {
       [utils.asGridCoord(0, 6)]: true,
       [utils.asGridCoord(0, 5)]: true,
       [utils.asGridCoord(0, 4)]: true,
+      [utils.asGridCoord(1, 8)]: true,
+      
     },
     cutsceneSpaces: {
       [utils.asGridCoord(5, 10)]: [
@@ -375,7 +365,7 @@ window.OverworldMaps = {
     }
   },
   Plain: {
-    audioSrc: "../music/sonic_music_i_guess.mp3",
+   
     lowerSrc: "./images/maps/StreetLower.png",
     upperSrc: "./images/maps/StreetUpper.png",
     gameObjects: {
@@ -387,21 +377,7 @@ window.OverworldMaps = {
         
       }),
      
-      ZAND: new Person({
-        x: utils.withGrid(33),
-        y: utils.withGrid(14),
-        src: "./images/characters/shadow.png",
-       
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Je hebt de KAART gevonden" },
-              { type: "textMessage", text: "Breng hem terug naar de baron" },
-              { type: "textMessage", text: "en gebruik dan de code z.a.n.d" }
-            ]
-          }
-        ]
-      })
+     
     
     
     
@@ -449,7 +425,7 @@ window.OverworldMaps = {
       [utils.asGridCoord(25, 5)]: [
         {
           events: [
-            { type: "changeMap", map: "BaronRoom" }
+         
           ]
         }
       ]
@@ -457,55 +433,9 @@ window.OverworldMaps = {
   
 
   },
-  BaronRoom: {
-    lowerSrc: "./images/maps/baronmapLower.png",
-    upperSrc: "./images/maps/baronmapUpper.png",
-    gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(8),
-      }),
-      
-     
-      baron: new Person({
-        x: utils.withGrid(5),
-        y: utils.withGrid(6),
-        src: "./images/baron.png",
-       
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hallo Speler...", faceHero: "baron" },
-              { type: "textMessage", text: "Ik heb een quest voor je MAAR HET IS GEHEIM" },
-              { type: "textMessage", text: "VOER DE CODE B.A.R.O.N IN NAAR HET SCHERM " },
-
-            ]
-          }
-        ]
-      }),
-     
-    },
-    walls: {
-      
-
-
-
-
-
-
-   
-    },
-    cutsceneSpaces: {
-      [utils.asGridCoord(5, 12)]: [
-        {
-          events: [
-            { type: "changeMap", map: "Plain" }
-          ]
-        }
-      ]
-    }
   
-
-  },
 }
+
+
+
+

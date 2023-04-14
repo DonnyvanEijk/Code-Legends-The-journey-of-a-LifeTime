@@ -12,13 +12,21 @@ let stickerbook = document.getElementById("stickerbook")
 let boekshow = document.getElementById("boekshow");
 let music = document.getElementById("music");
 let musicmenu = document.getElementById("musicmenu")
-let finalemusicbaron = new Audio("./music/Final Castle - Newer Super Mario Bros. DS Music - Extended.mp3")
+
 let trophys = document.getElementById("trophys");
 let trophymenu = document.getElementById("trophymenu")
 
 let stickers = document.getElementById("stickers");
 let stickermenu = document.getElementById("stickermenu")
+let startingmenu = document.getElementById("startingmenu")
 
+function changeMenu() {
+	startingmenu.style.opacity = "0"
+}
+
+let audioPage1 = new Audio();
+audioPage1.src = "../music/silly_tutorial_music.mp3";
+audioPage1.play();
 
 //variabelen :((()))
 
@@ -28,20 +36,9 @@ let stickermenu = document.getElementById("stickermenu")
 
 //shopitems 
 
-music.addEventListener("click", function() {
-	storeitems.style.display = "none"
-	musicmenu.style.display = "block"
-	
-	
-})
 
 
-trophys.addEventListener("click", function() {
-	storeitems.style.display = "none"
-	trophymenu.style.display = "block"
 
-	
-})
 
 
 
@@ -53,15 +50,7 @@ trophys.addEventListener("click", function() {
 
 //boekcode
 
-let boektoggle = false
 
-
-boekshow.addEventListener("click", function() {
-	boekshow.style.display = "none"
-})
-stickerbook.addEventListener("click", function() {
-	boekshow.style.display = "block"
-})
 
 
 
@@ -106,48 +95,51 @@ questitems.addEventListener("click", function () {
 	questitems.style.opacity = "0"
 })
 
-//questcode
-// var pattern1 = ['g', 'o', 'u', 'd'];
-// let baronquest = document.getElementById("quest1")
-// var current1 = 0;
-// var container1 = document.getElementById(".gamecontainer");
-// let claimed1;
-// let claimed2;
-// let claimed3;
 
-// let completedbaron = false;
-// var keyHandler1 = function (event) {
-// 	//zorg ervoor dat de pattern zichtbaar wordt
+var pattern1 = ['c', 'l', 'o', 'c', 'k'];
+let baronquest = document.getElementById("quest1")
+var current1 = 0;
+var container1 = document.getElementById(".gamecontainer");
+let claimed1;
+let claimed2;
+let claimed3;
+let quest1done = false;
 
-// 	if (pattern1.indexOf(event.key) < 0 || event.key !== pattern1[current1]) {
-// 		current1 = 0;
-// 		return;
-// 	}
+let completedbaron = false;
+var keyHandler1 = function (event) {
+	//zorg ervoor dat de pattern zichtbaar wordt
 
-
-// 	current1++;
+	if (pattern1.indexOf(event.key) < 0 || event.key !== pattern1[current1]) {
+		current1 = 0;
+		return;
+	}
 
 
-// 	if (pattern1.length === current1) {
-// 		if(quest1done == true) {
-// 			baronquest.innerHTML = "Je hebt deze quest al voltooid!"
+	current1++;
 
-// 		}
+
+	if (pattern1.length === current1) {
+		if(quest1done == true) {
+			baronquest.innerHTML = "Je hebt deze quest al voltooid!"
+
+		}
 		
 
 
-// 		if (openable = true && quest1done == false) {
-// 			baronquest.innerHTML = "Quest: Vind het goud van de baron door de correcte code in te voeren"
-// 			claimed1 = "claimable"
-// 		}
+		if (openable = true && quest1done == false) {
+			baronquest.innerHTML = "Find the original code for the professor"
+			claimed1 = "claimable"
+			console.log("yes?")
+			quest1done = true;
+		}
 
 
 
-// 	}
+	}
 
-// };
+};
 
-// document.addEventListener('keydown', keyHandler1, false);
+document.addEventListener('keydown', keyHandler1, false);
 
 
 
@@ -160,123 +152,91 @@ questitems.addEventListener("click", function () {
 
 //rewardcodes
 
-// var pattern2 = ['d', 'a', 'r', 'c', 'i'];
-// let aardappeltest = false
-// var current2 = 0;
-// let rewards;
-// let quest1done = false
-// var container2 = document.getElementById(".gamecontainer");
-// var keyHandler2 = function (event) {
-// 	//zorg ervoor dat de pattern zichtbaar wordt
+var pattern2 = ['5', 'e', '1', 'e', 'o'];
+let aardappeltest = false
+var current2 = 0;
+let rewards;
 
-// 	if (pattern2.indexOf(event.key) < 0 || event.key !== pattern2[current2]) {
-// 		current2 = 0;
-// 		return;
-// 	}
+var container2 = document.getElementById(".gamecontainer");
+var keyHandler2 = function (event) {
+	//zorg ervoor dat de pattern zichtbaar wordt
 
-
-// 	current2++;
+	if (pattern2.indexOf(event.key) < 0 || event.key !== pattern2[current2]) {
+		current2 = 0;
+		return;
+	}
 
 
-// 	if (pattern2.length === current2) {
-// 		completedbaron = true
-// 		if (claimed1 == "claimable" && quest1done  == false) {
-// 			questrewardtext.innerHTML = "Click here to claim your rewards!!"
-// 			questrewardtext.style.display = "block"
-// 			claimed1 = "unclaimable";
-// 			if (rewards == false) {
-// 				rewards = true;
-// 			}
-// 			quest1done = true
+	current2++;
 
 
-
-// 		}
+	if (pattern2.length === current2) {
+		
+		if (claimed1 == "claimable" && quest1done  == true) {
+			questrewardtext.innerHTML = "Click here for more information!"
+			questrewardtext.style.display = "block"
+			claimed1 = "unclaimable";
+			if (rewards == false) {
+				rewards = true;
+			}
+			quest1done = true
 
 
 
+		}
+	
 
 
 
 
 
-// 	}
-
-// };
 
 
-// document.addEventListener('keydown', keyHandler2, false);
+
+	}
+
+};
+
+
+document.addEventListener('keydown', keyHandler2, false);
 
 
 
 
 //krijg rewards van de quest met toggles
-// questrewardtext.addEventListener("click", function () {
+questrewardtext.addEventListener("click", function () {
 
-// 	if (claimed1 == "unclaimable") {
-// 		gold = gold + 100;
-// 		goldtext.innerText = gold;
-// 		openable = true;
-// 		questbaronclaim = false
-// 		currentexp = currentexp + 100;
-// 		claimed1 = "claimable"
-// 	}
-// 	else if (questbaronclaim = false) {
-// 		console.log("nee")
-// 	}
+	if (claimed1 == "unclaimable") {
+		
+	}
+	else if (questbaronclaim = false) {
+		console.log("nee")
+	}
 
-// 	if ( claimed2 == "unclaimable" ) {
-// 		gold = gold + 200;
-// 		goldtext.innerText = gold;
-// 		openable = true;
-// 		questbaronclaim = false
-// 		currentexp = currentexp + 200;
-// 		chapter1reward.play();
-// 		chapter1reward.volume = 0.3
-// 		chapter1.pause();
-// 		claimed2 = "claimable"
-// 	}
-
-
-// 	if ( claimed3 == "unclaimable" ) {
-// 		gold = gold + 600;
-// 		goldtext.innerText = gold;
-// 		openable = true;
-// 		questbaronclaim = false
-// 		currentexp = currentexp + 500;
-// 		chapter2reward.play();
-// 		chapter2reward.volume = 0.3
-// 		chapter2.pause()
-// 		claimed3 =  "claimable"
-// 	}
-// 	else if (questbaronclaim = false) {
-// 		console.log("nee")
-// 	}
-
-// 	baronquest.innerHTML = "There are no avaiable quest right now"
-// 	questbaronclaim = false
-// 	questrewardtext.style.display = "none"
-
-
-
-
-// 	exptext.innerHTML = currentexp;
-// 	if (currentexp >= 99 && lvl1clamed == false ) {
-// 		level = level + 1;
-// 		leveltext.innerText = level
-// 		lvl1clamed = true
+	if ( claimed2 == "unclaimable" ) {
 	
-
-// 	}
-// 	if (currentexp >= 299 && lvl2claimed == false) {
-// 		level = level + 1;
-// 		leveltext.innerText = level
-// 		lvl2claimed = true
-
-// 	}
+		claimed2 = "claimable"
+	}
 
 
-// })
+	if ( claimed3 == "unclaimable" ) {
+	
+		claimed3 =  "claimable"
+	}
+	else if (questbaronclaim = false) {
+		console.log("nee")
+	}
+
+	baronquest.innerHTML = "There are no avaiable quest right now"
+	questbaronclaim = false
+	questrewardtext.style.display = "none"
+
+
+
+
+
+
+})
 
 
 
