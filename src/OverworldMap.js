@@ -141,8 +141,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Je kan parten met ENTER", faceHero: "npcA" },
-              { type: "textMessage", text: "Wist je dat al?" },
+              { type: "textMessage", text: "You can talk with ENTER", faceHero: "npcA" },
+              { type: "textMessage", text: "Did u know?" },
 
             ]
           }
@@ -168,9 +168,9 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hallo Speler", faceHero: "baron" },
-              { type: "textMessage", text: "Ik ben Baron Erso" },
-              { type: "textMessage", text: "Nog een fijne dag verder " },
+              { type: "textMessage", text: "Hello Speler", faceHero: "baron" },
+              { type: "textMessage", text: "I am Baron Erso" },
+              { type: "textMessage", text: "have a nice day!" },
 
             ]
           }
@@ -223,7 +223,7 @@ window.OverworldMaps = {
           events: [
 
 
-            { type: "textMessage", text: "Je kan hier niet zijn!" },
+            { type: "textMessage", text: "You cant be here!" },
            
 
           ]
@@ -266,8 +266,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Het is een Computer" },
-              { type: "textMessage", text: "Het ziet er heel erg gevanceerd uit!" },
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
               
              
             ]

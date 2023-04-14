@@ -11,7 +11,7 @@ class Overworld {
       //canvas clear
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-      //Camera man neerlegen en esteblishaen
+      //Camera man establishment
       const cameraPerson = this.map.gameObjects.hero;
 
       //Update all objects
@@ -22,17 +22,17 @@ class Overworld {
         })
       })
 
-      //Onderste laag map
+      //lower layer build
       this.map.drawLowerImage(this.ctx, cameraPerson);
 
-      //Teken de objecten
+      //draw objects
       Object.values(this.map.gameObjects).sort((a, b) => {
         return a.y - b.y;
       }).forEach(object => {
         object.sprite.draw(this.ctx, cameraPerson);
       })
 
-      //Bovenste laag
+      //upper layer build
       this.map.drawUpperImage(this.ctx, cameraPerson);
 
       requestAnimationFrame(() => {
@@ -44,7 +44,7 @@ class Overworld {
 
   bindActionInput() {
     new KeyPressListener("Enter", () => {
-      //Checken of er iets is om te veranderen
+      //Check for changes
       this.map.checkForActionCutscene()
     })
   }
@@ -52,7 +52,7 @@ class Overworld {
   bindHeroPositionCheck() {
     document.addEventListener("PersonWalkingComplete", e => {
       if (e.detail.whoId === "hero") {
-        //Positie van hero wordt veranderd
+        //Position of hero chnages
         this.map.checkForFootstepCutscene()
       }
     })
