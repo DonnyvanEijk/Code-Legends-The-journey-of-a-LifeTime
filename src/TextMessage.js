@@ -6,7 +6,7 @@ class TextMessage {
   }
 
   createElement() {
-    //maak element
+    //make element
     this.element = document.createElement("div");
     this.element.classList.add("TextMessage");
 
@@ -15,14 +15,14 @@ class TextMessage {
       <button class="TextMessage_button">Next</button>
     `)
 
-    //init de schrijver
+    //init writer
     this.revealingText = new RevealingText({
       element: this.element.querySelector(".TextMessage_p"),
       text: this.text
     })
 
     this.element.querySelector("button").addEventListener("click", () => {
-      //Sluit de message af
+      //close message
       this.done();
     });
 

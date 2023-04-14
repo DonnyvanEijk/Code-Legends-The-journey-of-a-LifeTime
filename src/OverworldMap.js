@@ -60,7 +60,7 @@ class OverworldMap {
       let object = this.gameObjects[key];
       object.id = key;
 
-      //check of object kan mounten
+      //check if object can mount
       object.mount(this);
 
     })
@@ -257,11 +257,11 @@ window.OverworldMaps = {
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(5),
-        y: utils.withGrid(5),
+        y: utils.withGrid(25),
       }),
       COMPUTER: new Person({
         x: utils.withGrid(7),
-        y: utils.withGrid(3),
+        y: utils.withGrid(19),
         src: "./images/characters/people/Interactable_obkect.png",
         talking: [
           {
@@ -297,65 +297,12 @@ window.OverworldMaps = {
       })
     },
     walls: {
-      [utils.asGridCoord(1, 3)]: true,
-      [utils.asGridCoord(1, 5)]: true,
-      [utils.asGridCoord(1, 6)]: true,
-      [utils.asGridCoord(1, 7)]: true,
-      [utils.asGridCoord(6, 7)]: true,
-      [utils.asGridCoord(10, 7)]: true,
-      [utils.asGridCoord(7, 7)]: true,
-      [utils.asGridCoord(9, 7)]: true,
-      [utils.asGridCoord(10, 9)]: true,
-      [utils.asGridCoord(9, 9)]: true,
-
-
-      [utils.asGridCoord(6, 3)]: true,
-      [utils.asGridCoord(8, 3)]: true,
-      [utils.asGridCoord(7, 2)]: true,
-      [utils.asGridCoord(5, 3)]: true,
-      [utils.asGridCoord(4, 3)]: true,
-      [utils.asGridCoord(3, 3)]: true,
-      [utils.asGridCoord(2, 3)]: true,
-      [utils.asGridCoord(13, 5)]: true,
-      [utils.asGridCoord(13, 6)]: true,
-      // [utils.asGridCoord(13, 7)]: true,
-      // [utils.asGridCoord(13, 8)]: true,
-      [utils.asGridCoord(13, 9)]: true,
-      [utils.asGridCoord(7, 3)]: true,
-      [utils.asGridCoord(13, 9)]: true,
-      [utils.asGridCoord(12, 10)]: true,
-      [utils.asGridCoord(11, 10)]: true,
-      [utils.asGridCoord(10, 10)]: true,
-      [utils.asGridCoord(9, 10)]: true,
-      [utils.asGridCoord(8, 10)]: true,
-      [utils.asGridCoord(7, 10)]: true,
-      [utils.asGridCoord(6, 10)]: true,
-      [utils.asGridCoord(5, 12)]: true,
-      [utils.asGridCoord(4, 10)]: true,
-      [utils.asGridCoord(3, 10)]: true,
-      [utils.asGridCoord(2, 9)]: true,
-      [utils.asGridCoord(1, 9)]: true,
-
-      [utils.asGridCoord(9, 3)]: true,
-      [utils.asGridCoord(10, 3)]: true,
-      [utils.asGridCoord(11, 4)]: true,
-      [utils.asGridCoord(12, 4)]: true,
-      [utils.asGridCoord(5, 11)]: true,
-      [utils.asGridCoord(4, 10)]: true,
-      [utils.asGridCoord(3, 10)]: true,
-      [utils.asGridCoord(2, 10)]: true,
-      [utils.asGridCoord(1, 10)]: true,
-      [utils.asGridCoord(0, 9)]: true,
-      [utils.asGridCoord(0, 8)]: true,
-      [utils.asGridCoord(0, 7)]: true,
-      [utils.asGridCoord(0, 6)]: true,
-      [utils.asGridCoord(0, 5)]: true,
-      [utils.asGridCoord(0, 4)]: true,
-      [utils.asGridCoord(1, 8)]: true,
+     
+     
       
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(5, 10)]: [
+      [utils.asGridCoord(5, 26)]: [
         {
           events: [
             { type: "changeMap", map: "Plain" }

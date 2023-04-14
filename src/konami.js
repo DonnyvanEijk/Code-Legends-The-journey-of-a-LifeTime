@@ -2,7 +2,7 @@ var pattern = ['c', 'a', 'r', 'c'];
 var current = 0;
 var container = document.getElementById(".gamecontainer");
 var keyHandler = function (event) {
-//zorg ervoor dat de pattern zichtbaar wordt
+//visualization pattern
 
 	if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
 		current = 0;
@@ -28,7 +28,7 @@ var patternb = ['b', 'a', 'c', 'k'];
 var currentb = 0;
 var containerb = document.getElementById(".gamecontainer");
 var keyHandlerb = function (event) {
-//zorg ervoor dat de pattern zichtbaar wordt
+//visibility
 
 	if (patternb.indexOf(event.key) < 0 || event.key !== patternb[currentb]) {
 		currentb = 0;
