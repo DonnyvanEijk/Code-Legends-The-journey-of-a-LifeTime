@@ -1397,17 +1397,17 @@ body {
 }
 
 .game-container {
-  position: relative;
+  position: absolute;
   width: 352px;
   height: 198px;
   margin: 0 auto;
   outline: 1px solid rgb(0, 0, 0);
   bottom: 17rem;
-  left:-25rem;
-  top:-24rem;
+  left:36.5rem;
+  top:-14rem;
 
 
-  transform: scale(3.8) translateY(50%);
+  transform: scale(4.4) translateY(50%);
 }
 
 .game-container canvas {
@@ -2273,14 +2273,13 @@ transition: 500ms ease;
   }
 
 
-
   .quests {
-    position:absolute;
+    position: absolute;
     transform: scale(0.1);
  
     border-radius: 30px;
     cursor: pointer;
-    left:74rem;
+    left:73rem;
     z-index: 1001;
     top:10rem;
   }
@@ -2358,10 +2357,10 @@ transition: 500ms ease;
     background-color: darkred;
     color:white;
     font-family: "Bebas Neue";
-    position: relative
-    ;
+    position: absolute;
     width: 50rem;
-   
+    left:15rem;
+    top:1rem;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -2369,9 +2368,7 @@ transition: 500ms ease;
     border-radius: 10px;
     transition: 500ms ease;
   z-index: 101;
-  cursor:pointer;
-  top:-20rem;
-  left:20rem;
+  cursor:pointer
 
   }
 
