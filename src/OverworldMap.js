@@ -1,3 +1,6 @@
+
+
+
 class OverworldMap {
   constructor(config) {
     this.overworld = null;
@@ -14,11 +17,17 @@ class OverworldMap {
     this.isCutscenePlaying = false;
 
     this.audio = new Audio();
-    this.audio.src = config.audioSrc;
+    this.audioSrc = config.audioSrc;
+    this.audio.src = this.audioSrc;
     this.audio.loop = true;
-    
     this.audio.volume = 0.5;
-    this.audio.play();
+  
+    
+  
+
+    // Add event listener to pause audio when another song starts playing
+
+   
   }
 
   drawLowerImage(ctx, cameraPerson) {
@@ -101,21 +110,7 @@ class OverworldMap {
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x, y);
   }
-  changeMap(newMapConfig) {
-    // Stop current audio
-    this.audio.pause();
-
-    // Change map
-    // ...
-
-    // Load new audio
-    this.audio.src = newMapConfig.audioSrc;
-    this.audio.play();
-  }
-  
-  pauseAudio() {
-    this.audio.pause();
-  }
+ 
 }
 
 window.OverworldMaps = {
@@ -252,7 +247,7 @@ window.OverworldMaps = {
 
   },
   CodeRoom: {
-    
+    audioSrc: "../music/silly_tutorial_music.mp3",
     lowerSrc: "./images/maps/CoderoomLower.png",
     upperSrc: "./images/maps/CoderoomUpper.png",
     gameObjects: {
