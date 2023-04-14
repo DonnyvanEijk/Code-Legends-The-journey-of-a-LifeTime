@@ -380,7 +380,7 @@ window.OverworldMaps = {
     }
   },
   Plain: {
-    audioSrc: "",
+    audioSrc: "../music/sonic_music_i_guess.mp3",
     lowerSrc: "./images/maps/StreetLower.png",
     upperSrc: "./images/maps/StreetUpper.png",
     gameObjects: {
