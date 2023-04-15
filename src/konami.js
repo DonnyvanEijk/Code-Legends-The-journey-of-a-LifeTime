@@ -76,6 +76,7 @@ var keyHandler1 = function (event) {
 			console.log("yes?")
 			quest1done = true;
 			audioPage1.pause();
+			voiceprof1.play();
 		}
 
 

@@ -141,9 +141,19 @@ questrewardtext.addEventListener("click", function () {
 //audiofiles variables
 let audioPage1 = new Audio();
 audioPage1.src = "../music/silly_tutorial_music.mp3";
+let voiceprof1 = new Audio();
+voiceprof1.src = "../music/voicelines/voice_taurus1.mp3"
+let pre_lab = new Audio();
+pre_lab.src = "../music/Pre-Portal_Lab.mp3"
 
+//audio functions
+voiceprof1.addEventListener("ended", function () {
+    pre_lab.play()
+})
 
-
+pre_lab.addEventListener("ended", function () {
+    pre_lab.play()
+})
 
 
 //quest codes
