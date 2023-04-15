@@ -19,7 +19,7 @@ let stickers = document.getElementById("stickers");
 let stickermenu = document.getElementById("stickermenu")
 let startingmenu = document.getElementById("startingmenu")
 
-//functions
+//startbutton function
 function changeMenu() {
 	startingmenu.style.opacity = "0"
 	audioPage1.play();
