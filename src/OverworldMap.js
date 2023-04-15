@@ -290,6 +290,8 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "Player i need you?!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "I need the code for the machine, but I forgot it!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "The colorfull buttons are the hint to the code", faceHero: "ProfesorC" },
               { type: "textMessage", text: "Please fill in the code C.L.O.C.K on your keyboard", faceHero: "ProfesorC" },
             ]
           }
