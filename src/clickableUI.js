@@ -1,3 +1,4 @@
+//variabelen
 let questbutton = document.getElementById("questbutton");
 let questitems = document.getElementById("questitems");
 let currentexp = 0;
@@ -12,20 +13,17 @@ let stickerbook = document.getElementById("stickerbook")
 let boekshow = document.getElementById("boekshow");
 let music = document.getElementById("music");
 let musicmenu = document.getElementById("musicmenu")
-
 let trophys = document.getElementById("trophys");
 let trophymenu = document.getElementById("trophymenu")
-
 let stickers = document.getElementById("stickers");
 let stickermenu = document.getElementById("stickermenu")
 let startingmenu = document.getElementById("startingmenu")
 
+//functions
 function changeMenu() {
 	startingmenu.style.opacity = "0"
 	audioPage1.play();
 }
-
-//variabelen :((()))
 
 
 
