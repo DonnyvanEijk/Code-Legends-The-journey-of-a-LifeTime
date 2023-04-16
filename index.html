@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,71 @@
   <title>Code Legends: The journey of a LifeTime</title>
   <link href="./style.css" type="text/css" rel="stylesheet">
   <link rel="icon" href="./images/logo.png" type="image/icon type">
- 
+
 </head>
+
 <body>
-<div id="startingmenu" class="startingmenu">
-  <img src="./images/logo.png">
-<button onclick="changeMenu()" class="start">Play</button>
+  <div id="startingmenu" class="startingmenu">
+    <img src="./images/logo.png">
+    <button onclick="changeMenu()" class="start">Play</button>
 
-</div>
+  </div>
 
-<div id="ending">
-  <img src="./images/Win3x_Black_Screen_of_Death.gif" class="ending">
-<h2 class="endingtext">THANKS FOR PLAYING</h2>
-<h3 class="credits">Credits: Coder: DonnyGames, ArshGod (CODER123), Lawaz02 Baron Erso: Marc </h3>
-</div>
+  <div id="ending">
+    <img src="./images/Win3x_Black_Screen_of_Death.gif" class="ending">
+    <h2 class="endingtext">THANKS FOR PLAYING</h2>
+    <h3 class="credits">Credits: Coder: DonnyGames, ArshGod (CODER123), Lawaz02 Baron Erso: Marc </h3>
+  </div>
 
 
   <div id="settings" class="settingsmenu">
 
-<div id="xbox" class="xbox"><p>X</p></div>
+    <div id="xbox" class="xbox">
+      <p>X</p>
+    </div>
 
 
 
-<div id="volumebuttons" class="volumebuttons">
-  <p class="mainvolume">Volume:</p>
-<div id="volume0" class="volume0"><p>0</p></div>
-<div id="volume1" class="volume1"><p>1</p></div>
-<div id="volume2" class="volume2"><p>2</p></div>
-<div id="volume3" class="volume3"><p>3</p></div>
-<div id="volume4" class="volume4"><p>4</p></div>
-<div id="volume5" class="volume6"><p>5</p></div>
-<div id="volume6" class="volume6"><p>6</p></div>
-<div id="volume7" class="volume7"><p>7</p></div>
-<div id="volume8" class="volume8"><p>8</p></div>
-<div id="volume9" class="volume9"><p>9</p></div>
-<div id="volume10" class="volume10"><p>10</p></div>
+    <div id="volumebuttons" class="volumebuttons">
+      <p class="mainvolume">Volume:</p>
+      <div id="volume0" class="volume0">
+        <p>0</p>
+      </div>
+      <div id="volume1" class="volume1">
+        <p>1</p>
+      </div>
+      <div id="volume2" class="volume2">
+        <p>2</p>
+      </div>
+      <div id="volume3" class="volume3">
+        <p>3</p>
+      </div>
+      <div id="volume4" class="volume4">
+        <p>4</p>
+      </div>
+      <div id="volume5" class="volume6">
+        <p>5</p>
+      </div>
+      <div id="volume6" class="volume6">
+        <p>6</p>
+      </div>
+      <div id="volume7" class="volume7">
+        <p>7</p>
+      </div>
+      <div id="volume8" class="volume8">
+        <p>8</p>
+      </div>
+      <div id="volume9" class="volume9">
+        <p>9</p>
+      </div>
+      <div id="volume10" class="volume10">
+        <p>10</p>
+      </div>
 
 
 
 
-</div>
+    </div>
 
 
 
@@ -54,107 +80,105 @@
   <div class="ui">
 
 
-<div  class="settings">
-<img id="settingsbutton" src="./images/settings.png" alt="stiings">
+    <div class="settings">
+      <img id="settingsbutton" src="./images/settings.png" alt="stiings">
 
-</div>
-
-<div class="shop" id="shop">
-
-
-
-<h2>LE SHOPPE</h2>
-<img id="store" src="./images/store.png" alt="shop">
-
-<div id="shopitems" class="shopitems">
-
-
-<div id="music" class="music"><p>Music</p></div>
-
-<div id="trophys" class="trophys"><p>Trophys</p></div>
-
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-<div id="musicmenu" class="musicmenu">
-
-<h2>Music Shop</h2>
-
-
-<div id="xbutton1" class="xbutton1">X</div>
-
-</div>
-
-<div id="trophymenu" class="trophymenu">
-  <h2>Trophy Shop</h2>
-  <div id="xbutton2" class="xbutton2">X</div>
-</div>
-
-
-
-
-
-
-
-
-  <div id="questbutton" class="quests">
-<img src="./images/quest.png">
-  </div>
-
-
-
-
-<div id="questitems" class="questitems">
-  <p id="quest1">There are no avaiable quest right now</p>
-  <p><span id="quest2"></span></p>
-  <p><span id="quest3"></span></p>
-</div>
-
-  </div>
-
-
-
-
-
-
-  
-
-    <div id="gamecontainer" class="game-container">
-      <canvas class="game-canvas" width="352" height="198"></canvas>
     </div>
 
-    <!-- Scripts yes yes -->
-    <script src="./src/utils.js"></script>
-    
-    <script src="./src/DirectionInput.js"></script>
-    <script src="./src/konami.js"></script>
-    <script src="./src/Overworld.js"></script>
-    <script src="./src/GameObject.js"></script>
-    <script src="./src/Person.js"></script>
-    <script src="./src/Sprite.js"></script>
-    <script src="./src/OverworldMap.js"></script>
-    <script src="./src/KeyPressListener.js"></script>
-    <script src="./src/TextMessage.js"></script>
-    <script src="./src/OverworldEvent.js"></script>
-    <script src="./src/RevealingText.js"></script>
-    <script src="./src/SceneTransition.js"></script>
-    <script src="./src/init.js"></script>
-    <script src="./src/clickableUI.js"></script>
-   
-  
-  
+    <div class="shop" id="shop">
 
-  </body>
+
+
+      <h2>LE SHOPPE</h2>
+      <img id="store" src="./images/store.png" alt="shop">
+
+      <div id="shopitems" class="shopitems">
+
+
+        <div id="music" class="music">
+          <p>Music</p>
+        </div>
+
+        <div id="trophys" class="trophys">
+          <p>Trophys</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div id="musicmenu" class="musicmenu">
+
+      <h2>Music Shop</h2>
+
+
+      <div id="xbutton1" class="xbutton1">X</div>
+
+    </div>
+
+    <div id="trophymenu" class="trophymenu">
+      <h2>Trophy Shop</h2>
+      <div id="xbutton2" class="xbutton2">X</div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="questbutton" class="quests">
+      <img src="./images/quest.png">
+    </div>
+
+
+
+
+    <div id="questitems" class="questitems">
+      <p id="quest1">There are no avaiable quest right now</p>
+      <p><span id="quest2"></span></p>
+      <p><span id="quest3"></span></p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div id="gamecontainer" class="game-container">
+    <canvas class="game-canvas" width="352" height="198"></canvas>
+  </div>
+
+  <!-- Scripts yes yes -->
+  <script src="./src/utils.js"></script>
+
+  <script src="./src/DirectionInput.js"></script>
+  <script src="./src/konami.js"></script>
+  <script src="./src/Overworld.js"></script>
+  <script src="./src/GameObject.js"></script>
+  <script src="./src/Person.js"></script>
+  <script src="./src/Sprite.js"></script>
+  <script src="./src/OverworldMap.js"></script>
+  <script src="./src/KeyPressListener.js"></script>
+  <script src="./src/TextMessage.js"></script>
+  <script src="./src/OverworldEvent.js"></script>
+  <script src="./src/RevealingText.js"></script>
+  <script src="./src/SceneTransition.js"></script>
+  <script src="./src/init.js"></script>
+  <script src="./src/clickableUI.js"></script>
+
+
+
+
+</body>
+
 </html>
 </body>
+
 </html>
