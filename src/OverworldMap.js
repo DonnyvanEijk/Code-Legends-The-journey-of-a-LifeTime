@@ -251,7 +251,7 @@ window.OverworldMaps = {
   },
   CodeRoom: {
    
-    lowerSrc: "./images/maps/CoderoomLower.png",
+    lowerSrc: "./images/maps/labroom_portal_off.png",
     upperSrc: "./images/maps/CoderoomUpper.png",
     gameObjects: {
       hero: new Person({
@@ -274,6 +274,54 @@ window.OverworldMaps = {
           }
         ]
       }),
+
+      COMPUTER2: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(19),
+        src: "./images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
+              
+             
+            ]
+          }
+        ]
+      }),
+
+      HINT1: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(19),
+        src: "./images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Look at the buttons" },
+              { type: "textMessage", text: "purple, green, blue, green and yellow" },
+              { type: "textMessage", text: "What can this mean?" },
+             
+            ]
+          }
+        ]
+      }),
+
+      HINT1_2: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(19),
+        src: "./images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Look at the buttons" },
+              { type: "textMessage", text: "purple, green, blue, green and yellow" },
+              { type: "textMessage", text: "What can this mean?" },
+             
+            ]
+          }
+        ]
+      }),
      
       ProfesorC: new Person({
         x: utils.withGrid(3),
@@ -290,6 +338,8 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "Player i need you?!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "I need the code for the machine, but I forgot it!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "The colorfull buttons are the hint to the code", faceHero: "ProfesorC" },
               { type: "textMessage", text: "Please fill in the code C.L.O.C.K on your keyboard", faceHero: "ProfesorC" },
             ]
           }
@@ -335,7 +385,7 @@ window.OverworldMaps = {
 
 
    [utils.asGridCoord(4, 8)]: true,
-   [utils.asGridCoord(4, 7)]: true,
+   [utils.asGridCoord(6, 7)]: true,
    [utils.asGridCoord(6, 8)]: true,
    [utils.asGridCoord(6, 7)]: true,
    [utils.asGridCoord(5, 6)]: true,
