@@ -1436,7 +1436,7 @@ body {
 
 .startingmenu button {
   position: absolute;
-  top:20rem;
+  top:25rem;
   left:47rem;
   font-size: 2em;
   padding:10px;
@@ -1464,7 +1464,7 @@ body {
   width:250px;
   position: absolute;
   left:42rem;
-  top:3rem;
+  top:7rem;
   image-rendering: pixelated;
 }
 
@@ -1611,6 +1611,16 @@ body {
 
 
 
+}
+
+
+
+#VideoCutscene {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 

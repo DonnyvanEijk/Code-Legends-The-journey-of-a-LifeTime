@@ -139,6 +139,8 @@ questrewardtext.addEventListener("click", function () {
 
 
 //audiofiles variables
+
+
 let audioPage1 = new Audio();
 audioPage1.src = "../music/silly_tutorial_music.mp3";
 let voiceprof1 = new Audio();
@@ -155,7 +157,12 @@ pre_lab.addEventListener("ended", function () {
     pre_lab.play()
 })
 
+audioPage1.volume = 0.2;
 
+voiceprof1.volume = 0.2;
+
+
+pre_lab.volume = 0.2;
 //quest codes
 
 
