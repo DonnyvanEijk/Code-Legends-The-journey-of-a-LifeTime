@@ -23,6 +23,7 @@ let startingmenu = document.getElementById("startingmenu")
 function changeMenu() {
 	startingmenu.style.opacity = "0"
 	audioPage1.play();
+	help.play();
 }
 
 
@@ -143,6 +144,8 @@ questrewardtext.addEventListener("click", function () {
 
 let audioPage1 = new Audio();
 audioPage1.src = "../music/silly_tutorial_music.mp3";
+let help = new Audio("../music/Start.m4a")
+
 let voiceprof1 = new Audio();
 voiceprof1.src = "../music/voicelines/voice_taurus1.mp3"
 let pre_lab = new Audio();
