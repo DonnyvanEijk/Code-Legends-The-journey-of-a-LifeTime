@@ -20,11 +20,9 @@ let stickermenu = document.getElementById("stickermenu")
 let startingmenu = document.getElementById("startingmenu")
 
 //startbutton function
-function changeMenu() {
-	startingmenu.style.opacity = "0"
-	audioPage1.play();
-	help.play();
-}
+
+
+	
 
 
 
@@ -59,6 +57,7 @@ questbutton.addEventListener("click", function () {
 
 
 })
+
 
 
 //shopitems laten appearen
@@ -105,7 +104,7 @@ let completedbaron = false;
 questrewardtext.addEventListener("click", function () {
 
 	if (claimed1 == "unclaimable") {
-		window.location.href = "../subpages/after/index.html";
+		
 	}
 	else if (questbaronclaim = false) {
 		console.log("nee")
@@ -142,30 +141,19 @@ questrewardtext.addEventListener("click", function () {
 //audiofiles variables
 
 
-let audioPage1 = new Audio();
-audioPage1.src = "../music/silly_tutorial_music.mp3";
-let help = new Audio("../music/Start.m4a")
+let panic = new Audio();
+panic.src = "/music/Aaaah.m4a";
 
-let voiceprof1 = new Audio();
-voiceprof1.src = "../music/voicelines/voice_taurus1.mp3"
-let pre_lab = new Audio();
-pre_lab.src = "../music/Pre-Portal_Lab.mp3"
+panic.play();
 
 //audio functions
-voiceprof1.addEventListener("ended", function () {
-    pre_lab.play()
-})
-
-pre_lab.addEventListener("ended", function () {
-    pre_lab.play()
-})
-
-audioPage1.volume = 0.2;
-
-voiceprof1.volume = 0.2;
 
 
-pre_lab.volume = 0.2;
+panic.volume = 0.4;
+
+
+
+
 //quest codes
 
 

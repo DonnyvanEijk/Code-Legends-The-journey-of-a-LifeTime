@@ -2,7 +2,7 @@ const utils = {
   withGrid(n) {
     return n * 16;
   },
-  //maak positiefuncties aan
+  //make possition
   asGridCoord(x, y) {
     return `${x * 16},${y * 16}`
   },
@@ -21,7 +21,7 @@ const utils = {
     }
     return { x, y };
   },
-  //directie functie aanmaken
+  //direct function
   oppositeDirection(direction) {
     if (direction === "left") { return "right" }
     if (direction === "right") { return "left" }
@@ -29,7 +29,7 @@ const utils = {
     return "up"
   },
 
-  //eventfunctie aanmaken
+  //eventfunction 
 
   emitEvent(name, detail) {
     const event = new CustomEvent(name, {

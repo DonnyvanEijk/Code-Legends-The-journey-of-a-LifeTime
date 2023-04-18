@@ -33,7 +33,7 @@ class OverworldEvent {
       direction: this.event.direction,
       retry: true
     })
-
+// come in chat
     //Set up a handler to complete when correct person is done walking, then resolve the event
     const completeHandler = e => {
       if (e.detail.whoId === this.event.who) {
@@ -65,13 +65,13 @@ class OverworldEvent {
     sceneTransition.init(document.querySelector(".game-container"), () => {
       this.map.overworld.startMap( window.OverworldMaps[this.event.map] );
       resolve();
+     
 
       sceneTransition.fadeOut();
 
     })
   }
 
- 
 
  
   init() {

@@ -8,11 +8,11 @@ class Sprite {
       this.isLoaded = true;
     }
 
-    //Shadow
+    //Shado
     this.shadow = new Image();
     this.useShadow = true; //config.useShadow || false
     if (this.useShadow) {
-      this.shadow.src = "./images/characters/shadow.png";
+      this.shadow.src = "/images/characters/people/Interactable_obkect.png";
     }
     this.shadow.onload = () => {
       this.isShadowLoaded = true;

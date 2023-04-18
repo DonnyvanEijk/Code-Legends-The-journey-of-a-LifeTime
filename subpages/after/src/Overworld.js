@@ -3,6 +3,8 @@ class Overworld {
     this.element = config.element;
     this.canvas = this.element.querySelector(".game-canvas");
     this.ctx = this.canvas.getContext("2d");
+    // ctx.canvas.width  = window.innerWidth;
+    // ctx.canvas.height = window.innerHeight;
     this.map = null;
   }
  
@@ -79,10 +81,9 @@ class Overworld {
  
    this.map.startCutscene([
     
-     { type: "changeMap", map: "DemoRoom"},
-     { type: "textMessage", text: "Welcome to the tutorial!"},
-     { type: "textMessage", text: "Press w a s d to walk!"},
-     { type: "textMessage", text: "Press Enter to interact!"},
+     { type: "changeMap", map: "After"},
+    
+ 
    ])
  
   }

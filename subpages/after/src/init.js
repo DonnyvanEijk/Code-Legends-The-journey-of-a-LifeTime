@@ -1,5 +1,5 @@
 (function () {
-//Kijken of alles werkt
+//check if work
   const overworld = new Overworld({
     element: document.querySelector(".game-container")
   });

@@ -48,7 +48,7 @@ var keyHandlerb = function (event) {
 
 document.addEventListener('keydown', keyHandlerb, false);
 
-var pattern1 = ['c', 'l', 'o', 'c', 'k'];
+var pattern1 = ['p', 'a', 's', 't'];
 
 var keyHandler1 = function (event) {
 	//visibility
@@ -63,22 +63,8 @@ var keyHandler1 = function (event) {
 
 
 	if (pattern1.length === current1) {
-		if(quest1done == true) {
-			baronquest.innerHTML = "Je hebt deze quest al voltooid!"
-
-		}
 		
-
-
-		if (openable = true && quest1done == false) {
-			baronquest.innerHTML = "Find the original code for the professor"
-			claimed1 = "claimable"
-			console.log("yes?")
-			quest1done = true;
-			audioPage1.pause();
-			voiceprof1.play();
-			this.startMap(window.OverworldMaps.CodeRoom);
-		}
+window.location.href = "/subpages/test.html"
 
 
 
@@ -89,42 +75,4 @@ var keyHandler1 = function (event) {
 document.addEventListener('keydown', keyHandler1, false);
 
 //rewardcodes
-
-var pattern2 = ['5', 'e', '1', 'e', 'o'];
-let aardappeltest = false
-var current2 = 0;
-let rewards;
-
-var container2 = document.getElementById(".gamecontainer");
-var keyHandler2 = function (event) {
-	//visibility
-
-	if (pattern2.indexOf(event.key) < 0 || event.key !== pattern2[current2]) {
-		current2 = 0;
-		return;
-	}
-
-
-	current2++;
-
-
-	if (pattern2.length === current2) {
-		
-		if (claimed1 == "claimable" && quest1done  == true) {
-			questrewardtext.innerHTML = "Click here for more information!"
-			questrewardtext.style.display = "block"
-			claimed1 = "unclaimable";
-			if (rewards == false) {
-				rewards = true;
-			}
-			quest1done = true
-		}
-	}
-};
-
-
-document.addEventListener('keydown', keyHandler2, false);
-
-
-
 

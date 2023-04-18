@@ -8,7 +8,7 @@ class GameObject {
     this.sprite = new Sprite({
       gameObject: this,
       //hero staat op default
-      src: config.src || "../images/characters/people/hero.png",
+      src: config.src || "/images/characters/people/hero.png",
     });
 
     this.behaviorLoop = config.behaviorLoop || [];
@@ -23,7 +23,7 @@ class GameObject {
     this.isMounted = true;
     map.addWall(this.x, this.y);
 
-    //Kleinde behavior delay
+    // behavior delay
     setTimeout(() => {
       this.doBehaviorEvent(map);
     }, 10)
@@ -34,7 +34,7 @@ class GameObject {
 
   async doBehaviorEvent(map) {
 
-    //niks doen als er een cutsenen wordt afgespeeld
+    //do nothing when cutsene
     if (map.isCutscenePlaying || this.behaviorLoop.length === 0 || this.isStanding) {
       return;
     }
@@ -58,10 +58,4 @@ class GameObject {
 
 
   }
-
-
-
-
-  
-
 }

@@ -1,3 +1,6 @@
+
+
+
 class OverworldMap {
   constructor(config) {
     this.overworld = null;
@@ -12,8 +15,24 @@ class OverworldMap {
     this.upperImage.src = config.upperSrc;
 
     this.isCutscenePlaying = false;
+
+  
+   
+    
+
+
   }
 
+  stopAudio() {
+    this.currentAudio.pause();
+  }
+
+    
+  
+
+    // Add event listener to pause audio when another song starts playing
+
+  
   drawLowerImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.lowerImage,
@@ -41,7 +60,7 @@ class OverworldMap {
       let object = this.gameObjects[key];
       object.id = key;
 
-      //check of object kan mounten
+      //check if object can mount
       object.mount(this);
 
     })
@@ -94,13 +113,13 @@ class OverworldMap {
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x, y);
   }
-
+ 
 }
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "../images/maps/DemoLower.png",
-    upperSrc: "../images/maps/DemoUpper.png",
+    lowerSrc: "/images/maps/DemoLower.png",
+    upperSrc: "/images/maps/DemoUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -111,7 +130,7 @@ window.OverworldMaps = {
       npcA: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(9),
-        src: "../images/characters/people/npc1.png",
+        src: "/images/characters/people/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "left", time: 800 },
           { type: "stand", direction: "up", time: 800 },
@@ -122,8 +141,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Je kan parten met ENTER", faceHero: "npcA" },
-              { type: "textMessage", text: "Wist je dat al?" },
+              { type: "textMessage", text: "You can talk with ENTER", faceHero: "npcA" },
+              { type: "textMessage", text: "Did u know?" },
 
             ]
           }
@@ -132,7 +151,7 @@ window.OverworldMaps = {
       baron: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "../images/baron.png",
+        src: "/images/baron.png",
         behaviorLoop: [
          
           { type: "stand", direction: "left", time: 500 },
@@ -149,9 +168,9 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hallo Speler", faceHero: "baron" },
-              { type: "textMessage", text: "Ik ben Baron Erso" },
-              { type: "textMessage", text: "Nog een fijne dag verder " },
+              { type: "textMessage", text: "Hello Speler", faceHero: "baron" },
+              { type: "textMessage", text: "I am Baron Erso" },
+              { type: "textMessage", text: "have a nice day!" },
 
             ]
           }
@@ -204,7 +223,7 @@ window.OverworldMaps = {
           events: [
 
 
-            { type: "textMessage", text: "Je kan hier niet zijn!" },
+            { type: "textMessage", text: "You cant be here!" },
            
 
           ]
@@ -220,58 +239,97 @@ window.OverworldMaps = {
           ]
         }
       ],
-     
+      [utils.asGridCoord(5, 10)]: [
+        {
+          events: [
+            { type: "changeMap", map: "CodeRoom" }
+          ]
+        }
+      ]
     }
 
   },
   CodeRoom: {
-    lowerSrc: "../images/maps/CoderoomLower.png",
-    upperSrc: "../images/maps/CoderoomUpper.png",
+   
+    lowerSrc: "/images/maps/labroom_portal_off.png",
+    upperSrc: "/images/maps/CoderoomUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(5),
-        y: utils.withGrid(5),
+        y: utils.withGrid(25),
       }),
       COMPUTER: new Person({
         x: utils.withGrid(7),
-        y: utils.withGrid(3),
-        src: "../images/characters/people/Interactable_obkect.png",
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Het is een Computer" },
-              { type: "textMessage", text: "Het ziet er heel erg gevanceerd uit!" },
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
               
              
             ]
           }
         ]
       }),
-      NPCC: new Person({
-        x: utils.withGrid(10),
-        y: utils.withGrid(5),
-        src: "../images/characters/people/npc3.png",
-        behaviorLoop: [
-          { type: "stand", direction: "left", time: 800 },
-        ],
+
+      COMPUTER2: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Goeiemorgen!", faceHero: "NPCC" },
-              { type: "textMessage", text: "Heb je het nieuws al gehoord over de mijnen?" },
-              { type: "textMessage", text: "Er blijkt daar een schat te zitten!" }
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
+              
+             
             ]
           }
         ]
       }),
-      baron: new Person({
+
+      HINT1: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Look at the buttons" },
+              { type: "textMessage", text: "purple, green, blue, green and yellow" },
+              { type: "textMessage", text: "What can this mean?" },
+             
+            ]
+          }
+        ]
+      }),
+
+      HINT1_2: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Look at the buttons" },
+              { type: "textMessage", text: "purple, green, blue, green and yellow" },
+              { type: "textMessage", text: "What can this mean?" },
+             
+            ]
+          }
+        ]
+      }),
+     
+      ProfesorC: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(8),
-        src: "../images/characters/people/npc2.png",
+        src: "/images/characters/professor_Taurus.png",
 
         behaviorLoop: [
-          { type: "stand", direction: "left", time: 800 },
+          { type: "stand", direction: "down", time: 800 },
           { type: "stand", direction: "up", time: 800 },
           { type: "stand", direction: "right", time: 1200 },
           { type: "stand", direction: "up", time: 300 },
@@ -279,70 +337,22 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Wat een dag om kaal te zijn", faceHero: "baron" },
+              { type: "textMessage", text: "Player i need you?!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "I need the code for the machine, but I forgot it!", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "The colorfull buttons are the hint to the code", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "Please fill in the code C.L.O.C.K on your keyboard", faceHero: "ProfesorC" },
             ]
           }
         ]
       })
     },
     walls: {
-      [utils.asGridCoord(1, 3)]: true,
-      [utils.asGridCoord(1, 5)]: true,
-      [utils.asGridCoord(1, 6)]: true,
-      [utils.asGridCoord(1, 7)]: true,
-      [utils.asGridCoord(6, 7)]: true,
-      [utils.asGridCoord(10, 7)]: true,
-      [utils.asGridCoord(7, 7)]: true,
-      [utils.asGridCoord(9, 7)]: true,
-      [utils.asGridCoord(10, 9)]: true,
-      [utils.asGridCoord(9, 9)]: true,
-
-
-      [utils.asGridCoord(6, 3)]: true,
-      [utils.asGridCoord(8, 3)]: true,
-      [utils.asGridCoord(7, 2)]: true,
-      [utils.asGridCoord(5, 3)]: true,
-      [utils.asGridCoord(4, 3)]: true,
-      [utils.asGridCoord(3, 3)]: true,
-      [utils.asGridCoord(2, 3)]: true,
-      [utils.asGridCoord(13, 5)]: true,
-      [utils.asGridCoord(13, 6)]: true,
-      [utils.asGridCoord(13, 7)]: true,
-      [utils.asGridCoord(13, 8)]: true,
-      [utils.asGridCoord(13, 9)]: true,
-      [utils.asGridCoord(7, 3)]: true,
-      [utils.asGridCoord(13, 9)]: true,
-      [utils.asGridCoord(12, 10)]: true,
-      [utils.asGridCoord(11, 10)]: true,
-      [utils.asGridCoord(10, 10)]: true,
-      [utils.asGridCoord(9, 10)]: true,
-      [utils.asGridCoord(8, 10)]: true,
-      [utils.asGridCoord(7, 10)]: true,
-      [utils.asGridCoord(6, 10)]: true,
-      [utils.asGridCoord(5, 12)]: true,
-      [utils.asGridCoord(4, 10)]: true,
-      [utils.asGridCoord(3, 10)]: true,
-      [utils.asGridCoord(2, 9)]: true,
-      [utils.asGridCoord(1, 9)]: true,
-
-      [utils.asGridCoord(9, 3)]: true,
-      [utils.asGridCoord(10, 3)]: true,
-      [utils.asGridCoord(11, 4)]: true,
-      [utils.asGridCoord(12, 4)]: true,
-      [utils.asGridCoord(5, 11)]: true,
-      [utils.asGridCoord(4, 10)]: true,
-      [utils.asGridCoord(3, 10)]: true,
-      [utils.asGridCoord(2, 10)]: true,
-      [utils.asGridCoord(1, 10)]: true,
-      [utils.asGridCoord(0, 9)]: true,
-      [utils.asGridCoord(0, 8)]: true,
-      [utils.asGridCoord(0, 7)]: true,
-      [utils.asGridCoord(0, 6)]: true,
-      [utils.asGridCoord(0, 5)]: true,
-      [utils.asGridCoord(0, 4)]: true,
+     
+     
+      
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(5, 10)]: [
+      [utils.asGridCoord(5, 26)]: [
         {
           events: [
             { type: "changeMap", map: "Plain" }
@@ -351,9 +361,114 @@ window.OverworldMaps = {
       ]
     }
   },
+  After: {
+   
+    lowerSrc: "/images/maps/labroom_portal_on.png",
+    upperSrc: "/images/maps/CoderoomUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(25),
+      }),
+      COMPUTER: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
+              
+             
+            ]
+          }
+        ]
+      }),
+
+      COMPUTER2: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It is a Computer" },
+              { type: "textMessage", text: "It looks complicated" },
+              
+             
+            ]
+          }
+        ]
+      }),
+
+      HINT1: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(19),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Look at the buttons" },
+              { type: "textMessage", text: "purple, green, blue, green and yellow" },
+              { type: "textMessage", text: "What can this mean?" },
+             
+            ]
+          }
+        ]
+      }),
+
+      Portal: new Person({
+        x: utils.withGrid(31),
+        y: utils.withGrid(14),
+        src: "/images/characters/people/Interactable_obkect.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "P." },
+              { type: "textMessage", text: "A" },
+              { type: "textMessage", text: "S" },
+              { type: "textMessage", text: "T" },
+             
+            ]
+          }
+        ]
+      }),
+     
+      ProfesorC: new Person({
+        x: utils.withGrid(29),
+        y: utils.withGrid(16),
+        src: "/images/characters/professor_Taurus.png",
+
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 800 },
+          { type: "stand", direction: "up", time: 800 },
+          { type: "stand", direction: "right", time: 1200 },
+          { type: "stand", direction: "up", time: 300 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "THE PORTAL IS OPEN", faceHero: "ProfesorC" },
+              { type: "textMessage", text: "GO INSIDE, QUICK!!!!", faceHero: "ProfesorC" },
+              
+            ]
+          }
+        ]
+      })
+    },
+    walls: {
+     
+     
+      
+    },
+   
+  },
   Plain: {
-    lowerSrc: "../images/maps/StreetLower.png",
-    upperSrc: "../images/maps/StreetUpper.png",
+   
+    lowerSrc: "/images/maps/StreetLower.png",
+    upperSrc: "/images/maps/StreetUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -363,21 +478,7 @@ window.OverworldMaps = {
         
       }),
      
-      ZAND: new Person({
-        x: utils.withGrid(33),
-        y: utils.withGrid(14),
-        src: "../images/characters/shadow.png",
-       
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Je hebt de KAART gevonden" },
-              { type: "textMessage", text: "Breng hem terug naar de baron" },
-              { type: "textMessage", text: "en gebruik dan de code z.a.n.d" }
-            ]
-          }
-        ]
-      })
+     
     
     
     
@@ -388,7 +489,7 @@ window.OverworldMaps = {
 
 
    [utils.asGridCoord(4, 8)]: true,
-   [utils.asGridCoord(4, 7)]: true,
+   [utils.asGridCoord(6, 7)]: true,
    [utils.asGridCoord(6, 8)]: true,
    [utils.asGridCoord(6, 7)]: true,
    [utils.asGridCoord(5, 6)]: true,
@@ -425,7 +526,7 @@ window.OverworldMaps = {
       [utils.asGridCoord(25, 5)]: [
         {
           events: [
-            { type: "changeMap", map: "BaronRoom" }
+         
           ]
         }
       ]
@@ -433,57 +534,9 @@ window.OverworldMaps = {
   
 
   },
-  BaronRoom: {
-    lowerSrc: "../images/maps/baronmapLower.png",
-    upperSrc: "../images/maps/baronmapUpper.png",
-    gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(8),
-      }),
-      
-     
-      baron: new Person({
-        x: utils.withGrid(5),
-        y: utils.withGrid(6),
-        src: "../images/baron.png",
-       
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hallo Speler...", faceHero: "baron" },
-              { type: "textMessage", text: "Ik heb een quest voor je MAAR HET IS GEHEIM" },
-              { type: "textMessage", text: "VOER DE CODE B.A.R.O.N IN NAAR HET SCHERM " },
-
-            ]
-          }
-        ]
-      }),
-     
-    },
-    walls: {
-      
-
-
-
-
-
-
-   
-    },
-    cutsceneSpaces: {
-      [utils.asGridCoord(5, 12)]: [
-        {
-          events: [
-            { type: "changeMap", map: "Plain" }
-          ]
-        }
-      ]
-    }
   
-
-  },
 }
+
+
 
 

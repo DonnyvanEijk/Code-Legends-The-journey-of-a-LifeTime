@@ -19,7 +19,7 @@ class Person extends GameObject {
       this.updatePosition();
     } else {
 
-      //Movement voor het persson
+      //Movement for the persson
       //
       //
 

@@ -10,7 +10,7 @@ class KeyPressListener {
          }
       };
 
-      //lees de movement keys hiero
+      //Read the movements
       this.keyupFunction = function (event) {
          if (event.code === keyCode) {
             keySafe = true;
