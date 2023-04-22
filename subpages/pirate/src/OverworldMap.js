@@ -477,6 +477,48 @@ window.OverworldMaps = {
 
         
       }),
+      TimePirate: new Person({
+        x: utils.withGrid(45),
+        y: utils.withGrid(27),
+        src: "/images/characters/captain_time.png",
+
+        behaviorLoop: [
+         
+          { type: "stand", direction: "up", time: 300 },
+          { type: "stand", direction: "left", time: 300 },
+          { type: "stand", direction: "right", time: 400 },
+          { type: "stand", direction: "up", time: 350 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "W-who are you?!", faceHero: "TimePirate" },
+              { type: "textMessage", text: "YARRR fill in the code Y.A.R.R to talk please", faceHero: "TimePirate" },
+              
+            ]
+          }
+        ]
+      }),
+      man: new Person({
+        x: utils.withGrid(48),
+        y: utils.withGrid(23),
+        src: "/images/characters/matroos_berend.png",
+
+        behaviorLoop: [
+         
+          { type: "stand", direction: "up", time: 390 },
+         
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "hello", faceHero: "TimePirate" },
+              { type: "textMessage", text: "what are you", faceHero: "man" },
+              
+            ]
+          }
+        ]
+      }),
      
      
     

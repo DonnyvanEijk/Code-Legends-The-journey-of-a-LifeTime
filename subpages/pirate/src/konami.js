@@ -48,7 +48,7 @@ var keyHandlerb = function (event) {
 
 document.addEventListener('keydown', keyHandlerb, false);
 
-var pattern1 = ['p', 'a', 's', 't'];
+var pattern1 = ['y', 'a', 'r', 'r'];
 
 var keyHandler1 = function (event) {
 	//visibility
@@ -63,10 +63,13 @@ var keyHandler1 = function (event) {
 
 
 	if (pattern1.length === current1) {
-		
-window.location.href = "/subpages/test.html"
+let piratetalk = new Audio();
+piratetalk.src = "/chapters/Pirate.m4a"
+piratetalk.play();
 
-
+piratetalk.addEventListener("play", function() {
+	pirate.volume = '0.2'
+}) 
 
 	}
 

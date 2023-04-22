@@ -142,7 +142,7 @@ questrewardtext.addEventListener("click", function () {
 
 
 let panic = new Audio();
-panic.src = "/music/Mario and Luigi_ Partners In Time Music - Panic!.mp3";
+panic.src = "/music/PANICCC.mp3";
 
 panic.play();
 
