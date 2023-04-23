@@ -500,8 +500,8 @@ window.OverworldMaps = {
         ]
       }),
       man: new Person({
-        x: utils.withGrid(48),
-        y: utils.withGrid(23),
+        x: utils.withGrid(47),
+        y: utils.withGrid(24),
         src: "/images/characters/matroos_berend.png",
 
         behaviorLoop: [
@@ -538,17 +538,78 @@ window.OverworldMaps = {
    
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(5, 7)]: [
+      [utils.asGridCoord(50, 25)]: [
         {
           events: [
-            { type: "changeMap", map: "CodeRoom" }
+            { type: "changeMap", map: "onder" }
           ]
         }
       ],
-      [utils.asGridCoord(25, 5)]: [
+      [utils.asGridCoord(51, 25)]: [
         {
           events: [
-         
+            { type: "changeMap", map: "onder" }
+          ]
+        }
+      ]
+    }
+  
+
+  },
+  onder: {
+   
+    lowerSrc: "/images/maps/onder.png",
+   upperSrc: "",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(10),
+        y: utils.withGrid(3),
+
+        
+      }),
+
+    map: new Person({
+        x: utils.withGrid(17),
+        y: utils.withGrid(9),
+        src: "/images/characters/map.png",
+
+     
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "THE MAP" },
+              { type: "textMessage", text: "Take it to the pirates and use the code L.a.n.d.i.n.s.i.g.h.t" },
+              
+            ]
+          }
+        ]
+      }),
+    
+     
+     
+    
+    
+    
+    
+    },
+    walls: {
+      
+
+
+   
+
+
+
+
+   
+    },
+    cutsceneSpaces: {
+      
+      [utils.asGridCoord(9, 3)]: [
+        {
+          events: [
+            { type: "changeMap", map: "Pirate" }
           ]
         }
       ]
