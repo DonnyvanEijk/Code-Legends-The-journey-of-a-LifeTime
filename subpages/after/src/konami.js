@@ -64,7 +64,7 @@ var keyHandler1 = function (event) {
 
 	if (pattern1.length === current1) {
 		
-window.location.href = "/subpages/pirate/index.html"
+window.location.href = "../../subpages/pirate/index.html"
 
 
 

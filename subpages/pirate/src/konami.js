@@ -16,7 +16,7 @@ var keyHandler = function (event) {
 
 	if (pattern.length === current) {
 		current = 0;
-		window.location.href = "./subsites/carc/index.html"
+		window.location.href = "../../subsites/carc/index.html"
 	}
 
 };
@@ -42,7 +42,7 @@ var keyHandlerb = function (event) {
 
 	if (patternb.length === currentb) {
 		currentb = 0;
-		window.location.href = "./index.html"
+		window.location.href = "../../index.html"
 	}
 
 };
@@ -66,7 +66,7 @@ var keyHandler1 = function (event) {
 
 	if (pattern1.length === current1) {
 
-piratetalk.src = "/music/start_pirate (1).mp3"
+piratetalk.src = "../../music/start_pirate (1).mp3"
 if(quest1yesyes == false){
 piratetalk.play();
 baronquest.innerHTML = "Find the map for Barbosa"
@@ -108,7 +108,7 @@ var keyHandler2 = function (event) {
 
 	if (pattern2.length === current2 && quest1yesyes == true) {
 let piratetalk2 = new Audio();
-piratetalk2.src = "/chapters/pirate2_mattie.mp3"
+piratetalk2.src = "../../chapters/pirate2_mattie.mp3"
 if(quest1yesyes == true){
 piratetalk2.play();
 baronquest.innerHTML = "Click here for more information!"
@@ -157,7 +157,7 @@ var keyHandler3 = function (event) {
 
 if(quest1yesyes == "done"){
 
-window.location.href = "/subpages/amogus/index.html"
+window.location.href = "../../subpages/amogus/index.html"
 
 }
 

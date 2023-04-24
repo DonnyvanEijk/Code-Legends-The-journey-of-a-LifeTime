@@ -118,225 +118,9 @@ class OverworldMap {
 
 window.OverworldMaps = {
  
-  CodeRoom: {
-   
-    lowerSrc: "/images/maps/labroom_portal_off.png",
-    upperSrc: "/images/maps/CoderoomUpper.png",
-    gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(25),
-      }),
-      COMPUTER: new Person({
-        x: utils.withGrid(7),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It is a Computer" },
-              { type: "textMessage", text: "It looks complicated" },
-              
-             
-            ]
-          }
-        ]
-      }),
-
-      COMPUTER2: new Person({
-        x: utils.withGrid(8),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It is a Computer" },
-              { type: "textMessage", text: "It looks complicated" },
-              
-             
-            ]
-          }
-        ]
-      }),
-
-      HINT1: new Person({
-        x: utils.withGrid(9),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Look at the buttons" },
-              { type: "textMessage", text: "purple, green, blue, green and yellow" },
-              { type: "textMessage", text: "What can this mean?" },
-             
-            ]
-          }
-        ]
-      }),
-
-      HINT1_2: new Person({
-        x: utils.withGrid(10),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Look at the buttons" },
-              { type: "textMessage", text: "purple, green, blue, green and yellow" },
-              { type: "textMessage", text: "What can this mean?" },
-             
-            ]
-          }
-        ]
-      }),
-     
-      ProfesorC: new Person({
-        x: utils.withGrid(3),
-        y: utils.withGrid(8),
-        src: "/images/characters/professor_Taurus.png",
-
-        behaviorLoop: [
-          { type: "stand", direction: "down", time: 800 },
-          { type: "stand", direction: "up", time: 800 },
-          { type: "stand", direction: "right", time: 1200 },
-          { type: "stand", direction: "up", time: 300 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Player i need you?!", faceHero: "ProfesorC" },
-              { type: "textMessage", text: "I need the code for the machine, but I forgot it!", faceHero: "ProfesorC" },
-              { type: "textMessage", text: "The colorfull buttons are the hint to the code", faceHero: "ProfesorC" },
-              { type: "textMessage", text: "Please fill in the code C.L.O.C.K on your keyboard", faceHero: "ProfesorC" },
-            ]
-          }
-        ]
-      })
-    },
-    walls: {
-     
-     
-      
-    },
-    cutsceneSpaces: {
-      [utils.asGridCoord(5, 26)]: [
-        {
-          events: [
-            { type: "changeMap", map: "Plain" }
-          ]
-        }
-      ]
-    }
-  },
-  After: {
-   
-    lowerSrc: "/images/maps/labroom_portal_on.png",
-    upperSrc: "/images/maps/CoderoomUpper.png",
-    gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(25),
-      }),
-      COMPUTER: new Person({
-        x: utils.withGrid(7),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It is a Computer" },
-              { type: "textMessage", text: "It looks complicated" },
-              
-             
-            ]
-          }
-        ]
-      }),
-
-      COMPUTER2: new Person({
-        x: utils.withGrid(8),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It is a Computer" },
-              { type: "textMessage", text: "It looks complicated" },
-              
-             
-            ]
-          }
-        ]
-      }),
-
-      HINT1: new Person({
-        x: utils.withGrid(9),
-        y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Look at the buttons" },
-              { type: "textMessage", text: "purple, green, blue, green and yellow" },
-              { type: "textMessage", text: "What can this mean?" },
-             
-            ]
-          }
-        ]
-      }),
-
-      Portal: new Person({
-        x: utils.withGrid(31),
-        y: utils.withGrid(14),
-        src: "/images/characters/people/Interactable_obkect.png",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "P." },
-              { type: "textMessage", text: "A" },
-              { type: "textMessage", text: "S" },
-              { type: "textMessage", text: "T" },
-             
-            ]
-          }
-        ]
-      }),
-     
-      ProfesorC: new Person({
-        x: utils.withGrid(29),
-        y: utils.withGrid(16),
-        src: "/images/characters/professor_Taurus.png",
-
-        behaviorLoop: [
-          { type: "stand", direction: "down", time: 800 },
-          { type: "stand", direction: "up", time: 800 },
-          { type: "stand", direction: "right", time: 1200 },
-          { type: "stand", direction: "up", time: 300 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "THE PORTAL IS OPEN", faceHero: "ProfesorC" },
-              { type: "textMessage", text: "GO INSIDE, QUICK!!!!", faceHero: "ProfesorC" },
-              
-            ]
-          }
-        ]
-      })
-    },
-    walls: {
-     
-     
-      
-    },
-   
-  },
   Among: {
    
-    lowerSrc: "/images/maps/amongus_island.png",
+    lowerSrc: "../../images/maps/amongus_island.png",
    upperSrc: "",
     gameObjects: {
       hero: new Person({
@@ -350,7 +134,7 @@ window.OverworldMaps = {
       Barbosa_amongus: new Person({
         x: utils.withGrid(50),
         y: utils.withGrid(14),
-        src: "/images/characters/captain_time.png",
+        src: "../../images/characters/captain_time.png",
 
      
         talking: [
@@ -405,7 +189,7 @@ window.OverworldMaps = {
 
   onder: {
    
-    lowerSrc: "/images/maps/onder.png",
+    lowerSrc: "../../images/maps/onder.png",
    upperSrc: "",
     gameObjects: {
       hero: new Person({
@@ -419,7 +203,7 @@ window.OverworldMaps = {
     BerendOnder: new Person({
         x: utils.withGrid(17),
         y: utils.withGrid(9),
-        src: "/images/characters/matroos_berend.png",
+        src: "../../images/characters/matroos_berend.png",
 
      
         talking: [
@@ -439,7 +223,7 @@ window.OverworldMaps = {
     Bed1: new Person({
       x: utils.withGrid(35),
       y: utils.withGrid(9),
-      src: "/images/characters/map.png",
+      src: "../../images/characters/map.png",
 
    
       
@@ -451,7 +235,7 @@ window.OverworldMaps = {
     Bed2: new Person({
       x: utils.withGrid(27),
       y: utils.withGrid(2),
-      src: "/images/characters/map.png",
+      src: "../../images/characters/map.png",
 
    
     }),
@@ -462,7 +246,7 @@ window.OverworldMaps = {
    Bed3: new Person({
       x: utils.withGrid(29),
       y: utils.withGrid(15),
-      src: "/images/characters/map.png",
+      src: "../../images/characters/map.png",
 
    
       

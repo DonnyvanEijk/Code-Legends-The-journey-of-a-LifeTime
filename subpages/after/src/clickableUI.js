@@ -124,9 +124,9 @@ questrewardtext.addEventListener("click", function () {
 
 
 let panic = new Audio();
-panic.src = "/music/PANICCC.mp3";
+panic.src = "../../music/PANICCC.mp3";
 
-panic.play();
+
 
 //audio functions
 
@@ -176,3 +176,7 @@ panic.addEventListener("ended", function() {
 
 
 
+function changeMenu() {
+	startingmenu.style.opacity = "0"
+	panic.play();
+}

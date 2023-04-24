@@ -77,7 +77,7 @@ var keyHandler1 = function (event) {
 			quest1done = true;
 			audioPage1.pause();
 			voiceprof1.play();
-			this.startMap(window.OverworldMaps.CodeRoom);
+			
 		}
 
 

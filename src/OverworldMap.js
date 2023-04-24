@@ -326,7 +326,7 @@ window.OverworldMaps = {
       ProfesorC: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(8),
-        src: "../images/characters/professor_Taurus.png",
+        src: "./images/characters/professor_Taurus.png",
 
         behaviorLoop: [
           { type: "stand", direction: "down", time: 800 },

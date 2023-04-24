@@ -123,11 +123,14 @@ questrewardtext.addEventListener("click", function () {
 
 let panic = new Audio();
 let pirate = new Audio();
-panic.src = "/music/Aaaah.m4a";
-pirate.src= "/music/pirate_music.mp3";
+panic.src = "../../music/Aaaah.m4a";
+pirate.src= "../../music/pirate_music.mp3";
 
-panic.play();
+function changeMenu() {
+	startingmenu.style.display = "none"
+	panic.play();
 pirate.play();
+}
 
 //audio functions
 

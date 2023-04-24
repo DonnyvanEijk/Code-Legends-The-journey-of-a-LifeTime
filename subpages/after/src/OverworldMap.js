@@ -118,8 +118,8 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "/images/maps/DemoLower.png",
-    upperSrc: "/images/maps/DemoUpper.png",
+    lowerSrc: "../../images/maps/DemoLower.png",
+    upperSrc: "../../images/maps/DemoUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -130,7 +130,7 @@ window.OverworldMaps = {
       npcA: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(9),
-        src: "/images/characters/people/npc1.png",
+        src: "../../images/characters/people/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "left", time: 800 },
           { type: "stand", direction: "up", time: 800 },
@@ -151,7 +151,7 @@ window.OverworldMaps = {
       baron: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/baron.png",
+        src: "../../images/baron.png",
         behaviorLoop: [
          
           { type: "stand", direction: "left", time: 500 },
@@ -251,8 +251,8 @@ window.OverworldMaps = {
   },
   CodeRoom: {
    
-    lowerSrc: "/images/maps/labroom_portal_off.png",
-    upperSrc: "/images/maps/CoderoomUpper.png",
+    lowerSrc: "../../images/maps/labroom_portal_off.png",
+    upperSrc: "../../images/maps/CoderoomUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -262,7 +262,7 @@ window.OverworldMaps = {
       COMPUTER: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -278,7 +278,7 @@ window.OverworldMaps = {
       COMPUTER2: new Person({
         x: utils.withGrid(8),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -294,7 +294,7 @@ window.OverworldMaps = {
       HINT1: new Person({
         x: utils.withGrid(9),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -310,7 +310,7 @@ window.OverworldMaps = {
       HINT1_2: new Person({
         x: utils.withGrid(10),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -326,7 +326,7 @@ window.OverworldMaps = {
       ProfesorC: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(8),
-        src: "/images/characters/professor_Taurus.png",
+        src: "../../images/characters/professor_Taurus.png",
 
         behaviorLoop: [
           { type: "stand", direction: "down", time: 800 },
@@ -363,8 +363,8 @@ window.OverworldMaps = {
   },
   After: {
    
-    lowerSrc: "/images/maps/labroom_portal_on.png",
-    upperSrc: "/images/maps/CoderoomUpper.png",
+    lowerSrc: "../../images/maps/labroom_portal_on.png",
+    upperSrc: "../../images/maps/CoderoomUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -374,7 +374,7 @@ window.OverworldMaps = {
       COMPUTER: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -390,7 +390,7 @@ window.OverworldMaps = {
       COMPUTER2: new Person({
         x: utils.withGrid(8),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -406,7 +406,7 @@ window.OverworldMaps = {
       HINT1: new Person({
         x: utils.withGrid(9),
         y: utils.withGrid(19),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -422,7 +422,7 @@ window.OverworldMaps = {
       Portal: new Person({
         x: utils.withGrid(31),
         y: utils.withGrid(14),
-        src: "/images/characters/people/Interactable_obkect.png",
+        src: "../../images/characters/people/Interactable_obkect.png",
         talking: [
           {
             events: [
@@ -439,7 +439,7 @@ window.OverworldMaps = {
       ProfesorC: new Person({
         x: utils.withGrid(29),
         y: utils.withGrid(16),
-        src: "/images/characters/professor_Taurus.png",
+        src: "../../images/characters/professor_Taurus.png",
 
         behaviorLoop: [
           { type: "stand", direction: "down", time: 800 },
@@ -467,8 +467,8 @@ window.OverworldMaps = {
   },
   Plain: {
    
-    lowerSrc: "/images/maps/StreetLower.png",
-    upperSrc: "/images/maps/StreetUpper.png",
+    lowerSrc: "../../images/maps/StreetLower.png",
+    upperSrc: "../../images/maps/StreetUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,

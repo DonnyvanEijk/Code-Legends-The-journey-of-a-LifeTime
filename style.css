@@ -2673,13 +2673,26 @@ z-index: 1001;
   height:100vh;
   position: absolute;
   z-index: -15;
-  opacity: 1;
+  opacity: 0;
   transition: 500ms ease;
 }
 
 
 
+#fullscreencheck {
+  color:white;
+  z-index: 2000;
+  display:none;
+  background-color: black;
+  width: 100vw;
+  height:100vh;
+}
 
+#fullscreencheck p {
+ text-align: center;
+ position: relative;
+ top:20rem;
+}
 
 
 

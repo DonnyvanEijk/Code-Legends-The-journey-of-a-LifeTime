@@ -8,7 +8,7 @@ class GameObject {
     this.sprite = new Sprite({
       gameObject: this,
       //hero staat op default
-      src: config.src || "/images/characters/people/hero.png",
+      src: config.src || "../../images/characters/people/hero.png",
     });
 
     this.behaviorLoop = config.behaviorLoop || [];
