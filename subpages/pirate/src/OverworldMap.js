@@ -569,22 +569,85 @@ window.OverworldMaps = {
         
       }),
 
-    map: new Person({
+    BerendOnder: new Person({
         x: utils.withGrid(17),
         y: utils.withGrid(9),
-        src: "/images/characters/map.png",
+        src: "/images/characters/matroos_berend.png",
 
      
         talking: [
           {
             events: [
-              { type: "textMessage", text: "THE MAP" },
-              { type: "textMessage", text: "Take it to the pirates and use the code L.a.n.d.i.n.s.i.g.h.t" },
+              { type: "textMessage", text: "oh uhhhh here is the map ig" },
+              { type: "textMessage", text: "take it to the captain and use the code:" },
+              { type: "textMessage", text: "l.a.n.d.i.n.s.i.g.h.t" },
               
             ]
           }
         ]
       }),
+
+
+      
+    Bed1: new Person({
+      x: utils.withGrid(35),
+      y: utils.withGrid(9),
+      src: "/images/characters/map.png",
+
+   
+      talking: [
+        {
+          events: [
+            { type: "textMessage", text: "Barbosa's bed?" },
+            { type: "textMessage", text: "better not touch it" },
+          
+          ]
+        }
+      ]
+    }),
+  
+
+
+    
+    Bed2: new Person({
+      x: utils.withGrid(27),
+      y: utils.withGrid(2),
+      src: "/images/characters/map.png",
+
+   
+      talking: [
+        {
+          events: [
+            { type: "textMessage", text: "oh that creep berend his bed" },
+            { type: "textMessage", text: "better not get in" },
+          
+            
+          ]
+        }
+      ]
+    }),
+  
+
+
+    
+   Bed3: new Person({
+      x: utils.withGrid(29),
+      y: utils.withGrid(15),
+      src: "/images/characters/map.png",
+
+   
+      talking: [
+        {
+          events: [
+            { type: "textMessage", text: "Ahhhh the rusty visitors bed" },
+            { type: "textMessage", text: "lets go sleep!" },
+            { type: "textMessage", text: "use code s.l.e.e.p to get sleepin." },
+            
+          ]
+        }
+      ]
+    }),
+  
     
      
      

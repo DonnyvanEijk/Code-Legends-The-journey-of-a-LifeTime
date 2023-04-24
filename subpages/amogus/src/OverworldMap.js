@@ -117,138 +117,7 @@ class OverworldMap {
 }
 
 window.OverworldMaps = {
-  DemoRoom: {
-    lowerSrc: "/images/maps/DemoLower.png",
-    upperSrc: "/images/maps/DemoUpper.png",
-    gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(6),
-      }),
-      
-      npcA: new Person({
-        x: utils.withGrid(7),
-        y: utils.withGrid(9),
-        src: "/images/characters/people/npc1.png",
-        behaviorLoop: [
-          { type: "stand", direction: "left", time: 800 },
-          { type: "stand", direction: "up", time: 800 },
-          { type: "stand", direction: "right", time: 1200 },
-          { type: "stand", direction: "up", time: 300 },
-
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "You can talk with ENTER", faceHero: "npcA" },
-              { type: "textMessage", text: "Did u know?" },
-
-            ]
-          }
-        ]
-      }),
-      baron: new Person({
-        x: utils.withGrid(3),
-        y: utils.withGrid(6),
-        src: "/images/baron.png",
-        behaviorLoop: [
-         
-          { type: "stand", direction: "left", time: 500 },
-
-
-
-
-          
-
-          { type: "stand", direction: "right", time: 500 }
-
-
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hello Speler", faceHero: "baron" },
-              { type: "textMessage", text: "I am Baron Erso" },
-              { type: "textMessage", text: "have a nice day!" },
-
-            ]
-          }
-        ]
-      }),
-    },
-    walls: {
-      [utils.asGridCoord(7, 6)]: true,
-      [utils.asGridCoord(8, 6)]: true,
-      [utils.asGridCoord(7, 7)]: true,
-      [utils.asGridCoord(8, 7)]: true,
-      [utils.asGridCoord(6, 4)]: true,
-      [utils.asGridCoord(8, 4)]: true,
-      [utils.asGridCoord(6, 3)]: true,
-      [utils.asGridCoord(8, 3)]: true,
-      [utils.asGridCoord(7, 2)]: true,
-      [utils.asGridCoord(5, 3)]: true,
-      [utils.asGridCoord(4, 3)]: true,
-      [utils.asGridCoord(3, 3)]: true,
-      [utils.asGridCoord(2, 3)]: true,
-      [utils.asGridCoord(1, 3)]: true,
-      [utils.asGridCoord(9, 3)]: true,
-      [utils.asGridCoord(10, 3)]: true,
-      [utils.asGridCoord(11, 4)]: true,
-      [utils.asGridCoord(11, 5)]: true,
-      [utils.asGridCoord(11, 6)]: true,
-      [utils.asGridCoord(11, 7)]: true,
-      [utils.asGridCoord(11, 8)]: true,
-      [utils.asGridCoord(11, 9)]: true,
-      [utils.asGridCoord(10, 10)]: true,
-      [utils.asGridCoord(9, 10)]: true,
-      [utils.asGridCoord(8, 10)]: true,
-      [utils.asGridCoord(7, 10)]: true,
-      [utils.asGridCoord(6, 10)]: true,
-      [utils.asGridCoord(5, 11)]: true,
-      [utils.asGridCoord(4, 10)]: true,
-      [utils.asGridCoord(3, 10)]: true,
-      [utils.asGridCoord(2, 10)]: true,
-      [utils.asGridCoord(1, 10)]: true,
-      [utils.asGridCoord(0, 9)]: true,
-      [utils.asGridCoord(0, 8)]: true,
-      [utils.asGridCoord(0, 7)]: true,
-      [utils.asGridCoord(0, 6)]: true,
-      [utils.asGridCoord(0, 5)]: true,
-      [utils.asGridCoord(0, 4)]: true,
-    },
-    cutsceneSpaces: {
-      [utils.asGridCoord(7, 4)]: [
-        {
-          events: [
-
-
-            { type: "textMessage", text: "You cant be here!" },
-           
-
-          ]
-        }
-      ],
-      [utils.asGridCoord(5, 10)]: [
-        {
-          events: [
-
-
-            { type: "textMessage", text: "Tutorial finished!!" },
-
-          ]
-        }
-      ],
-      [utils.asGridCoord(5, 10)]: [
-        {
-          events: [
-            { type: "changeMap", map: "CodeRoom" }
-          ]
-        }
-      ]
-    }
-
-  },
+ 
   CodeRoom: {
    
     lowerSrc: "/images/maps/labroom_portal_off.png",
@@ -465,20 +334,38 @@ window.OverworldMaps = {
     },
    
   },
-  Pirate: {
+  Among: {
    
-    lowerSrc: "/images/maps/Pirates.png",
+    lowerSrc: "/images/maps/amongus_island.png",
    upperSrc: "",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(45),
-        y: utils.withGrid(26),
+        x: utils.withGrid(50),
+        y: utils.withGrid(8),
 
         
       }),
      
+      Barbosa_amongus: new Person({
+        x: utils.withGrid(50),
+        y: utils.withGrid(14),
+        src: "/images/characters/captain_time.png",
+
      
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Finnaly My treasure.. UMMM", faceHero:"Barbosa_amongus" },
+              { type: "textMessage", text: "Our treasure :)" },
+              { type: "textMessage", text: "use code s.u.s.s.y to continue!!!" },
+             
+              
+            ]
+          }
+        ]
+      }),
+
     
     
     
@@ -514,9 +401,112 @@ window.OverworldMaps = {
   
 
   },
+
+
+  onder: {
+   
+    lowerSrc: "/images/maps/onder.png",
+   upperSrc: "",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(10),
+        y: utils.withGrid(3),
+
+        
+      }),
+
+    BerendOnder: new Person({
+        x: utils.withGrid(17),
+        y: utils.withGrid(9),
+        src: "/images/characters/matroos_berend.png",
+
+     
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "uhhh we are here" },
+              { type: "textMessage", text: "go see barbosa" },
+             
+              
+            ]
+          }
+        ]
+      }),
+
+
+      
+    Bed1: new Person({
+      x: utils.withGrid(35),
+      y: utils.withGrid(9),
+      src: "/images/characters/map.png",
+
+   
+      
+    }),
+  
+
+
+    
+    Bed2: new Person({
+      x: utils.withGrid(27),
+      y: utils.withGrid(2),
+      src: "/images/characters/map.png",
+
+   
+    }),
+  
+
+
+    
+   Bed3: new Person({
+      x: utils.withGrid(29),
+      y: utils.withGrid(15),
+      src: "/images/characters/map.png",
+
+   
+      
+    }),
+  
+    
+     
+     
+    
+    
+    
+    
+    },
+    walls: {
+      
+
+
+   
+
+
+
+
+   
+    },
+    cutsceneSpaces: {
+      
+      [utils.asGridCoord(9, 3)]: [
+        {
+          events: [
+            { type: "changeMap", map: "Among" }
+          ]
+        }
+      ]
+    }
+  
+
+  },
   
   
 }
+
+  
+  
+
 
 
 

@@ -143,7 +143,7 @@ questrewardtext.addEventListener("click", function () {
 
 let panic = new Audio();
 let pirate = new Audio();
-panic.src = "/music/Aaaah.m4a";
+panic.src = "/chapters/scream_for_amongus.mp3";
 pirate.src= "/music/pirate_music.mp3";
 
 panic.play();
@@ -152,12 +152,18 @@ pirate.play();
 //audio functions
 
 
-panic.volume = 0.4;
+panic.volume = 1;
 pirate.volume = 0.4;
 
 
 
+panic.addEventListener("play", function() {
+	pirate.volume = "0.1"
+})
 
+panic.addEventListener("ended", function() {
+	pirate.volume = "0.4"
+})
 //quest codes
 
 
