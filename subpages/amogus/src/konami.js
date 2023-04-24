@@ -92,7 +92,7 @@ document.addEventListener('keydown', keyHandler1, false);
 //rewardcodes
 
 var pattern2 = ['l', 'a', 'n', 'd','i', 'n', 's', 'i','g', 'h', 't',];
-
+let current2 = 0;
 var keyHandler2 = function (event) {
 	//visibility
 

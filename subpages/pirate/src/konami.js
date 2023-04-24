@@ -51,6 +51,7 @@ document.addEventListener('keydown', keyHandlerb, false);
 let piratetalk = new Audio();
 var pattern1 = ['y', 'a', 'r', 'r'];
 
+
 var keyHandler1 = function (event) {
 	//visibility
 
@@ -92,7 +93,7 @@ document.addEventListener('keydown', keyHandler1, false);
 //rewardcodes
 
 var pattern2 = ['l', 'a', 'n', 'd','i', 'n', 's', 'i','g', 'h', 't',];
-
+let current2 = 0;
 var keyHandler2 = function (event) {
 	//visibility
 
@@ -135,3 +136,34 @@ piratetalk2.addEventListener("play", function() {
 };
 
 document.addEventListener('keydown', keyHandler2, false);
+
+
+
+var pattern3 = ['s', 'l', 'e', 'e', 'p'];
+
+var keyHandler3 = function (event) {
+	//visibility
+
+	if (pattern3.indexOf(event.key) < 0 || event.key !== pattern3[current3]) {
+		current3 = 0;
+		return;
+	}
+
+
+	current3++;
+
+
+	if (pattern3.length === current3) {
+
+if(quest1yesyes == "done"){
+
+window.location.href = "/subpages/amogus/index.html"
+
+}
+
+
+	}
+
+};
+
+document.addEventListener('keydown', keyHandler3, false);

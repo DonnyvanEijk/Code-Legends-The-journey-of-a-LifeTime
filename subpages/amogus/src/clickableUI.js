@@ -60,26 +60,6 @@ questbutton.addEventListener("click", function () {
 
 
 
-//shopitems laten appearen
-let store = document.getElementById("shop");
-let storeitems = document.getElementById("shopitems");
-let xbutton = document.getElementById("xbutton");
-let toggle = false
-
-
-store.addEventListener("click", function() {
-if(toggle == false){
-storeitems.style.display = "block";
-toggle = true
-} else {
- storeitems.style.display = "none";
- toggle = false;
-  
-   
-}
-
-})
-
 
 
 
@@ -168,45 +148,6 @@ panic.addEventListener("ended", function() {
 
 
 //settingsvolume
-
-
-let volumes = document.getElementById("volumebuttons")
-let volume0 = document.getElementById("volume0")
-let volume1 = document.getElementById("volume1")
-let volume2 = document.getElementById("volume2")
-let volume3 = document.getElementById("volume3")
-let volume4 = document.getElementById("volume4")
-let volume5 = document.getElementById("volume5")
-let volume6 = document.getElementById("volume6")
-let volume7 = document.getElementById("volume7")
-let volume8 = document.getElementById("volume8")
-let volume9 = document.getElementById("volume9")
-let volume10 = document.getElementById("volume10")
-let settingsbutton = document.getElementById("settingsbutton")
-let settings = document.getElementById("settings")
-let xbox = document.getElementById("xbox")
-
-
-
-
-
-
-//settings animatie en xbutton systeem
-settingsbutton.addEventListener("click", function () {
-	if (settings.style.right = "150rem") {
-		settings.style.animation = "settings-slide 2s"
-		settings.style.animationFillMode = "forwards"
-	}
-})
-
-
-
-xbox.addEventListener("click", function () {
-	console.log("closing")
-	settings.style.right = "150rem"
-	settings.style.animation = "";
-})
-
 
 
 
