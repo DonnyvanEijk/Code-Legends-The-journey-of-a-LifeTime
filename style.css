@@ -2675,6 +2675,7 @@ z-index: 1001;
   z-index: -15;
   opacity: 0;
   transition: 500ms ease;
+  background-color: black;
 }
 
 
