@@ -128,7 +128,7 @@ pirate.src= "../../music/pirate_music.mp3";
 
 
 function changeMenu() {
-	startingmenu.style.opacity = "0"
+	startingmenu.style.display = "none";
 	panic.play();
 pirate.play();
 }

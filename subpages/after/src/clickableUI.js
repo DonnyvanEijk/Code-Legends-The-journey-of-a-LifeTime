@@ -52,6 +52,7 @@ let startingmenu = document.getElementById("startingmenu")
 questbutton.addEventListener("click", function () {
 	
 	questitems.style.opacity = "1"
+	
 
 
 

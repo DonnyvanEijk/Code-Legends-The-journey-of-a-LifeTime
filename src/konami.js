@@ -64,7 +64,7 @@ var keyHandler1 = function (event) {
 
 	if (pattern1.length === current1) {
 		if(quest1done == true) {
-			baronquest.innerHTML = "Je hebt deze quest al voltooid!"
+			baronquest.innerHTML = "You already finished this!"
 
 		}
 		

@@ -21,7 +21,7 @@ let startingmenu = document.getElementById("startingmenu")
 
 //startbutton function
 function changeMenu() {
-	startingmenu.style.opacity = "0"
+	startingmenu.style.display = "none"
 	audioPage1.play();
 	help.play();
 }

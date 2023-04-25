@@ -79,12 +79,21 @@ let claimed2;
 let claimed3;
 let quest1done = false;
 let completedbaron = false;
+let Audio2 = new Audio('../../chapters/pirate2_mattie.mp3')
 
+Audio2.addEventListener("play", function() {
+	audio1.pause();
+})
+
+Audio2.addEventListener("ended", function() {
+	pirate.play();
+})
 //krijg rewards van de quest met toggles
 questrewardtext.addEventListener("click", function () {
 
 	if (claimed1 == "unclaimable") {
-		
+	Audio2.play();
+	claimed1 = "sleep"
 	}
 	else if (questbaronclaim = false) {
 		console.log("nee")
