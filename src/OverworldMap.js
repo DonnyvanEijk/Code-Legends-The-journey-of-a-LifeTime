@@ -117,10 +117,12 @@ class OverworldMap {
 }
 
 window.OverworldMaps = {
+  //making a new testmap
   DemoRoom: {
     lowerSrc: "./images/maps/DemoLower.png",
     upperSrc: "./images/maps/DemoUpper.png",
     gameObjects: {
+      //the ibjects on this map
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(5),
@@ -132,6 +134,7 @@ window.OverworldMaps = {
         y: utils.withGrid(9),
         src: "./images/characters/people/npc1.png",
         behaviorLoop: [
+          //does it have idle movement
           { type: "stand", direction: "left", time: 800 },
           { type: "stand", direction: "up", time: 800 },
           { type: "stand", direction: "right", time: 1200 },
@@ -141,6 +144,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
+              //can they talk?
               { type: "textMessage", text: "You can talk with ENTER", faceHero: "npcA" },
               { type: "textMessage", text: "Did u know?" },
 
@@ -177,6 +181,7 @@ window.OverworldMaps = {
         ]
       }),
     },
+    //Collision 
     walls: {
       [utils.asGridCoord(7, 6)]: true,
       [utils.asGridCoord(8, 6)]: true,
@@ -217,6 +222,8 @@ window.OverworldMaps = {
       [utils.asGridCoord(0, 5)]: true,
       [utils.asGridCoord(0, 4)]: true,
     },
+
+    //Cutscenes 
     cutsceneSpaces: {
       [utils.asGridCoord(7, 4)]: [
         {

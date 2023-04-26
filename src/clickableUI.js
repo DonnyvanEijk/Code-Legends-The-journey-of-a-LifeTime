@@ -28,29 +28,6 @@ function changeMenu() {
 
 
 
-
-
-//shopitems 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//boekcode
-
-
-
-
-
-
 questbutton.addEventListener("click", function () {
 	
 	questitems.style.opacity = "1"
@@ -59,20 +36,6 @@ questbutton.addEventListener("click", function () {
 
 
 })
-
-
-//shopitems laten appearen
-let store = document.getElementById("shop");
-let storeitems = document.getElementById("shopitems");
-let xbutton = document.getElementById("xbutton");
-let toggle = false
-
-
-
-
-
-
-
 
 //questcode
 
@@ -90,7 +53,7 @@ let claimed3;
 let quest1done = false;
 let completedbaron = false;
 
-//krijg rewards van de quest met toggles
+//QuestrewardToggles
 questrewardtext.addEventListener("click", function () {
 
 	if (claimed1 == "unclaimable") {
@@ -156,10 +119,10 @@ voiceprof1.volume = 0.2;
 
 
 pre_lab.volume = 0.2;
-//quest codes
 
 
-//settingsvolume
+
+
 
 
 

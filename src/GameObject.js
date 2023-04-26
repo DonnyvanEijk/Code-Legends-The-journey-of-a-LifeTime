@@ -7,7 +7,7 @@ class GameObject {
     this.direction = config.direction || "down";
     this.sprite = new Sprite({
       gameObject: this,
-      //hero staat op default
+      //hero is default character
       src: config.src || "./images/characters/people/hero.png",
     });
 
@@ -39,21 +39,21 @@ class GameObject {
       return;
     }
 
-    //Info geven aan javascript
+    //make the event usable
     let eventConfig = this.behaviorLoop[this.behaviorLoopIndex];
     eventConfig.who = this.id;
 
-    //event aanmaken als een object
+    //Make the event a object
     const eventHandler = new OverworldEvent({ map, event: eventConfig });
     await eventHandler.init();
 
-    //events aanmaken in een array
+    //throw them in a array
     this.behaviorLoopIndex += 1;
     if (this.behaviorLoopIndex === this.behaviorLoop.length) {
       this.behaviorLoopIndex = 0;
     }
 
-    //OPNIEUW!
+    //AND DO IT AGAIN
     this.doBehaviorEvent(map);
 
 

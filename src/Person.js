@@ -23,7 +23,7 @@ class Person extends GameObject {
       //
       //
 
-      //Case: Je klikt op een pijl en je wil dat je character beweegt
+
       if (!state.map.isCutscenePlaying && this.isPlayerControlled && state.arrow) {
         this.startBehavior(state, {
           type: "walk",
@@ -35,11 +35,11 @@ class Person extends GameObject {
   }
 
   startBehavior(state, behavior) {
-    //direction naard de behavior zetten
+    //set the direction to the behavior
     this.direction = behavior.direction;
 
     if (behavior.type === "walk") {
-      //als er geen ruimte is laat em er n iet door heen
+      // if there is no space he is not allowed
       if (state.map.isSpaceTaken(this.x, this.y, this.direction)) {
 
         behavior.retry && setTimeout(() => {

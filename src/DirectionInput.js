@@ -20,7 +20,7 @@ class DirectionInput {
     return this.heldDirections[0];
   }
 
-  //eventlistenenr voor de movement
+  //eventlistenenr for the movement and sprites
 
   init() {
     document.addEventListener("keydown", e => {
