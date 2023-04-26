@@ -150,6 +150,27 @@ window.OverworldMaps = {
         ]
       }),
 
+      chest: new Person({
+        x: utils.withGrid(48),
+        y: utils.withGrid(29),
+        src: "/images/characters/people/Interactable_obkect.png",
+
+     
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Its the CHEST" },
+              { type: "textMessage", text: "Its unopenable?" },
+              { type: "textMessage", text: "MAYBE A CODE WORKS" },
+              { type: "textMessage", text: "the chest does have some color on it" },
+              { type: "textMessage", text: "gold, green and brown" },
+             
+              
+            ]
+          }
+        ]
+      }),
+
     
     
     

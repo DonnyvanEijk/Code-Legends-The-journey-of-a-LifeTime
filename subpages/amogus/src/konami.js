@@ -91,7 +91,7 @@ document.addEventListener('keydown', keyHandler1, false);
 
 //rewardcodes
 
-var pattern2 = ['l', 'a', 'n', 'd','i', 'n', 's', 'i','g', 'h', 't',];
+var pattern2 = ['2', '6', '1'];
 let current2 = 0;
 var keyHandler2 = function (event) {
 	//visibility
@@ -106,28 +106,8 @@ var keyHandler2 = function (event) {
 
 
 	if (pattern2.length === current2 && quest1yesyes == true) {
-let piratetalk2 = new Audio();
-piratetalk2.src = "../../chapters/pirate2_mattie.mp3"
-if(quest1yesyes == true){
-piratetalk2.play();
-baronquest.innerHTML = "Click here for more information!"
-quest1yesyes = "done";
-}
-piratetalk2.addEventListener("play", function() {
-	pirate.pause();
-}) 
-piratetalk2.addEventListener("ended", function() {
-	pirate.play();
 
-
-	
-}) 
-
-piratetalk2.addEventListener("play", function() {
-	piratetalk.pause();
-})
-
-
+window.location.href = "../../subpages/VoiceLineEnd/index.html"
 
 
 	}

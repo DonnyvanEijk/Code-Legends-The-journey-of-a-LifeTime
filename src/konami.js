@@ -70,7 +70,7 @@ var keyHandler1 = function (event) {
 		
 
 
-		if (openable = true && quest1done == false) {
+		if ( quest1done == false) {
 			baronquest.innerHTML = "Find the original code for the professor"
 			claimed1 = "claimable"
 			console.log("yes?")
