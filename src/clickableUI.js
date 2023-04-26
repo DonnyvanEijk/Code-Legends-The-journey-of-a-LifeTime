@@ -1,3 +1,7 @@
+//! PLEASE DONT MIND THE UNUSED VARIABLES !//
+
+
+
 //variabelen
 let questbutton = document.getElementById("questbutton");
 let questitems = document.getElementById("questitems");
